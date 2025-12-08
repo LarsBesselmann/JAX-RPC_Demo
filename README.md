@@ -101,9 +101,29 @@ Access AMA via browser using the URL https://rhel9-base.gym.lan:3001.
 #### Create a workspace, then download and run the discovery tool
 
 1. In AMA, create a new workspace called **JAX_RPC**.
+<<<<<<< HEAD
 2. Download the discovery tool.
 3. Extract the AMA Discovery Tool
 
+=======
+
+	<kbd>![](./images/media/AMA_Create_Workspace.png)</kbd>
+
+2. Download the discovery tool.
+
+	Click on **Open discovery tool** 
+	<kbd>![](./images/media/AMA_OpenDiscoveryTool.png)</kbd>
+
+	Leave the Source Operating System as Linux and click on **Download discovery tool** to download the discovery tool.
+	<kbd>![](./images/media/AMA_DownloadDiscoveryTool.png)</kbd>
+
+	The file will be stored under  **~Downloads**
+
+3. Extract the AMA Discovery Tool
+
+	In a terminal window, execute the following commands:
+
+>>>>>>> a4efd60 (Update assessment preparation)
 		mkdir ~/ama_discovery
 		cd ~/ama_discovery/
 		tar -zxvf ~/Downloads/DiscoveryTool-Linux_JAX_RPC.tgz 
