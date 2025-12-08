@@ -118,8 +118,8 @@ Access AMA via browser using the URL https://rhel9-base.gym.lan:3001.
 
 	In a terminal window, execute the following commands:
 
-		mkdir ~/ama_discovery
-		cd ~/ama_discovery/
+		mkdir ~/Student/ama_discovery
+		cd ~/Student/ama_discovery/
 		tar -zxvf ~/Downloads/DiscoveryTool-Linux_JAX_RPC.tgz 
 
 4. Run the discovery tool: 
