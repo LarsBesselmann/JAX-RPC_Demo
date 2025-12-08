@@ -81,6 +81,21 @@ The environment has the following software installed:
 - server2 listens on HTTP port 9082
 
 
+### Start the Application Modernization Accelerator 
+To start the Application Modernization Accelerator, run the following commands
+
+	cd ~/application-modernization-accelerator-local-4.5.0/
+	./launch.sh 5
+
+You should get an output like: 
+**The Application Modernization Accelerator 4.5.0 is available for use at the following URL> https://rhel9-base.gym.lan:3001**
+
+Access AMA via browser using the URL https://rhel9-base.gym.lan:3001.
+ 
+
+
+## Start the demo
+
 ### Test the JAX-RPC application on traditional WAS
 
 1. Start the tWAS servers server1 and server2
@@ -109,6 +124,28 @@ The environment has the following software installed:
 
 	<kbd>![](./images/media/JAX-RPC_client_server2_D.png)</kbd>
 
+
+### Assess the application
+
+1. Start the Application Modernization Accelerator
+
+		cd ~/application-modernization-accelerator-local-4.5.0/
+		./launch.sh 5
+
+	You should get an output like: 
+	The Application Modernization Accelerator 4.5.0 is available for use at the following URL> https://rhel9-base.gym.lan:3001
+
+Access AMA and create a new workspace called JAX_RPC.
+Download the discovery tool.
+
+Extract the AMA Discovery Tool
+mkdir ~/ama_discovery
+cd ~/ama_discovery/
+tar -zxvf ~/Downloads/DiscoveryTool-Linux_JAX_RPC.tgz 
+
+Run the discovery tool:
+cd ama-discovery-4.5.0
+bin/ama-discovery -w ~/IBM/WebSphere/AppServer/
 
 
 
