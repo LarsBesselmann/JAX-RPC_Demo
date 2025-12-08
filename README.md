@@ -80,19 +80,41 @@ The environment has the following software installed:
 - server1 listens on HTTP port 9080
 - server2 listens on HTTP port 9082
 
+<br>
 
-### Start the Application Modernization Accelerator 
+### Prepare the application assessment
+
+#### Start the Application Modernization Accelerator 
 To start the Application Modernization Accelerator, run the following commands
 
 	cd ~/application-modernization-accelerator-local-4.5.0/
 	./launch.sh 5
 
-You should get an output like: 
+You should get an output like: <br>
 **The Application Modernization Accelerator 4.5.0 is available for use at the following URL> https://rhel9-base.gym.lan:3001**
 
 Access AMA via browser using the URL https://rhel9-base.gym.lan:3001.
- 
 
+<kbd>![](./images/media/AMA_Panel1.png)</kbd>
+
+
+#### Create a workspace, then download and run the discovery tool
+
+1. In AMA, create a new workspace called **JAX_RPC**.
+2. Download the discovery tool.
+3. Extract the AMA Discovery Tool
+
+		mkdir ~/ama_discovery
+		cd ~/ama_discovery/
+		tar -zxvf ~/Downloads/DiscoveryTool-Linux_JAX_RPC.tgz 
+
+4. Run the discovery tool:
+
+		cd ama-discovery-4.5.0
+		bin/ama-discovery -w ~/IBM/WebSphere/AppServer/
+
+
+<br>
 
 ## Start the demo
 
@@ -127,25 +149,10 @@ Access AMA via browser using the URL https://rhel9-base.gym.lan:3001.
 
 ### Assess the application
 
-1. Start the Application Modernization Accelerator
+1. Access the Application Modernization Accelerator via browser using the URL https://rhel9-base.gym.lan:3001.
 
-		cd ~/application-modernization-accelerator-local-4.5.0/
-		./launch.sh 5
 
-	You should get an output like: 
-	The Application Modernization Accelerator 4.5.0 is available for use at the following URL> https://rhel9-base.gym.lan:3001
 
-Access AMA and create a new workspace called JAX_RPC.
-Download the discovery tool.
-
-Extract the AMA Discovery Tool
-mkdir ~/ama_discovery
-cd ~/ama_discovery/
-tar -zxvf ~/Downloads/DiscoveryTool-Linux_JAX_RPC.tgz 
-
-Run the discovery tool:
-cd ama-discovery-4.5.0
-bin/ama-discovery -w ~/IBM/WebSphere/AppServer/
 
 
 
