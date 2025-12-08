@@ -54,15 +54,15 @@ The environment has the following software installed:
 
 ### Prepare the environment
 
-1. Start the WAS ND cell
-
+1. Start the WAS ND Deployment Manager and the two node agents
+	
 		~/Student/demo-rpc-ws-project/scripts/startWASEnv.sh
 
-	Alternatively you could also start the servers separately
+	Alternatively you could also start the components separately
 
-		~/IBM/WebSphere/AppServer/profiles/Dmgr01/bin/startManager.sh 
- 		~/IBM/WebSphere/AppServer/profiles/AppSrv01/bin/startNode.sh
- 		~/IBM/WebSphere/AppServer/profiles/AppSrv02/bin/startNode.sh
+		~/IBM/WebSphere/AppServer/profiles/Dmgr01/bin/startManager.sh
+		~/IBM/WebSphere/AppServer/profiles/AppSrv01/bin/startNode.sh 
+		~/IBM/WebSphere/AppServer/profiles/AppSrv02/bin/startNode.sh 
 
 
 2. Adjust the JAX-RPC service deployment (map it to server1)
