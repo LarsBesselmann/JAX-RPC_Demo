@@ -95,7 +95,24 @@ The environment has the following software installed:
 
 2. Access the JAX-RPC client via server1 at URL: http://localhost:9082/DemoRPCClient
 
-	<kbd>![](./images/media/JAX-RPC_service_server1.png)</kbd>
+	<kbd>![](./images/media/JAX-RPC_client_server2_A.png)</kbd>
+
+3. Click on the link to access the servlet page **Personal Info Web Service**
+
+	<kbd>![](./images/media/JAX-RPC_client_server2_B.png)</kbd>
+
+4. Enter Jane Doe for the name, then click on **Submit Query** 
+
+	<kbd>![](./images/media/JAX-RPC_client_server2_C.png)</kbd>
+
+	You should get the age and place of birth as response from the JAX-RPC service. 
+
+	<kbd>![](./images/media/JAX-RPC_client_server2_D.png)</kbd>
+
+
+
+
+
 
 
 
