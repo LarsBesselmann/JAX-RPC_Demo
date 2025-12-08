@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <web-app>  
+    
+       <display-name>Demo RPC Web Service</display-name>
+   <servlet>
+      <servlet-name>rpc_demo_DemoRPC</servlet-name>
+      <servlet-class>rpc.demo.DemoRPCImpl</servlet-class>
+      <load-on-startup>0</load-on-startup>
+   </servlet> 
+      
+    </web-app>  

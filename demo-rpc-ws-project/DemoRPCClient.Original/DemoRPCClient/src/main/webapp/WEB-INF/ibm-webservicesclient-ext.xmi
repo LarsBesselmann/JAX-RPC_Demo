@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.etools.webservice.wscext:WsClientExtension xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.etools.webservice.wscext="http://www.ibm.com/websphere/appserver/schemas/5.0.2/wscext.xmi" xmi:id="WsClientExtension_1736290742198">
+  <serviceRefs xmi:id="ServiceRef_1736290742198" serviceRefLink="service/DemoRPC">
+    <portQnameBindings xmi:id="PortQnameBinding_1736290742198" portQnameLocalNameLink="DemoRPC"/>
+  </serviceRefs>
+</com.ibm.etools.webservice.wscext:WsClientExtension>

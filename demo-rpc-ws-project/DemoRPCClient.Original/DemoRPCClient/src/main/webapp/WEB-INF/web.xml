@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?><web-app version="3.0" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+    <service-ref>
+        <description>WSDL Service DemoRPC</description>
+        <service-ref-name>service/DemoRPC</service-ref-name>
+        <service-interface>rpc.demo.DemoRPC_Service</service-interface>
+        <wsdl-file>WEB-INF/wsdl/DemoRPC.wsdl</wsdl-file>
+        <jaxrpc-mapping-file>WEB-INF/DemoRPC_mapping.xml</jaxrpc-mapping-file>
+        <service-qname xmlns:pfx="http://demo.rpc">pfx:DemoRPC</service-qname>
+        <port-component-ref>
+            <service-endpoint-interface>rpc.demo.DemoRPC_PortType</service-endpoint-interface>
+        </port-component-ref>
+    </service-ref>
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+</web-app>

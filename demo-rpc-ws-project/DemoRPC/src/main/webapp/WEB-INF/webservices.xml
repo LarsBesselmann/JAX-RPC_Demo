@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><webservices version="1.3" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/javaee_web_services_1_3.xsd">
+    <webservice-description>
+        <webservice-description-name>DemoRPC</webservice-description-name>
+        <wsdl-file>WEB-INF/wsdl/DemoRPC.wsdl</wsdl-file>
+        <jaxrpc-mapping-file>WEB-INF/DemoRPC_mapping.xml</jaxrpc-mapping-file>
+        <port-component>
+            <port-component-name>DemoRPC</port-component-name>
+            <wsdl-port xmlns:pfx="http://demo.rpc">pfx:DemoRPC</wsdl-port>
+            <service-endpoint-interface>rpc.demo.DemoRPC_PortType</service-endpoint-interface>
+            <service-impl-bean>
+                <servlet-link>rpc_demo_DemoRPC</servlet-link>
+            </service-impl-bean>
+        </port-component>
+    </webservice-description>
+</webservices>

@@ -1,0 +1,13 @@
+.DS_Store
+.idea/
+.moderne/
+**/.classpath
+**/.factorypath
+**/.project
+**/.settings
+**/rewrite.yml
+!/pom.xml
+target
+.vscode
+**/server.xml
+!/server.xml
