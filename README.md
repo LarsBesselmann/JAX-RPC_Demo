@@ -134,7 +134,7 @@ Access AMA via browser using the URL https://rhel9-base.gym.lan:3001.
 	<kbd>![](./images/media/AMA_Discovery_Completed.png)</kbd>
 
 
-5. Switch back to theh browser with the AMA (https://rhel9-base.gym.lan:3001). You should see a panle like this:
+5. Switch back to theh browser with the AMA (https://rhel9-base.gym.lan:3001). You should see a panel like this:
 
 	<kbd>![](./images/media/AMA_Manage_Destination.png)</kbd>
 
