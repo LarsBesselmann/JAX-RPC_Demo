@@ -75,6 +75,22 @@ The environment has the following software installed:
 
 ### Test the JAX-RPC application on traditional WAS
 
+1. Start the tWAS servers server1 and server2
+
+		~/IBM/WebSphere/AppServer/profiles/AppSrv01/bin/startServer.sh server1
+		~/IBM/WebSphere/AppServer/profiles/AppSrv02/bin/startServer.sh server2
+
+2. Access the JAX-RPC service via server1 at URL: http://localhost:9080/DemoRPC/services/DemoRPC
+
+	<kbd>![](./images/media/JAX-RPC_service_server1.png)</kbd>
+
+
+2. Access the JAX-RPC client via server1 at URL: http://localhost:9081/DemoRPCClient
+
+	<kbd>![](./images/media/JAX-RPC_service_server1.png)</kbd>
+
+
+
 
 
 
