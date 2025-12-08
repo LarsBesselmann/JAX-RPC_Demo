@@ -141,7 +141,6 @@ Access AMA via browser using the URL https://rhel9-base.gym.lan:3001.
 	Select the **radio button** next to Liberty and click **Confirm**
 	<kbd>![](./images/media/AMA_Manage_Destination2.png)</kbd>
 
-
 6. In the Visualzation Panel, you can see the three discovered applications. 
 	<kbd>![](./images/media/AMA_Visualization_Panel.png)</kbd>
 
