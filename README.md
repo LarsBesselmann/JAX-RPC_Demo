@@ -73,6 +73,14 @@ The environment has the following software installed:
 
 		~/IBM/WebSphere/AppServer/profiles/Dmgr01/bin/wsadmin.sh -lang jython -f ~/Student/demo-rpc-ws-project/scripts/adjust_JAXRPC_client_deployment.py
 
+
+4. Access the Deployment Manager Administration Console via the URL https://localhost:9043/ibm/console to review the environment. 
+
+- Credentials: techzone / IBMDem0s!
+- server1 listens on HTTP port 9080
+- server2 listens on HTTP port 9082
+
+
 ### Test the JAX-RPC application on traditional WAS
 
 1. Start the tWAS servers server1 and server2
@@ -85,7 +93,7 @@ The environment has the following software installed:
 	<kbd>![](./images/media/JAX-RPC_service_server1.png)</kbd>
 
 
-2. Access the JAX-RPC client via server1 at URL: http://localhost:9081/DemoRPCClient
+2. Access the JAX-RPC client via server1 at URL: http://localhost:9082/DemoRPCClient
 
 	<kbd>![](./images/media/JAX-RPC_service_server1.png)</kbd>
 
