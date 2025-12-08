@@ -128,7 +128,7 @@ Access AMA via browser using the URL https://rhel9-base.gym.lan:3001.
 		cd ~/ama_discovery/
 		tar -zxvf ~/Downloads/DiscoveryTool-Linux_JAX_RPC.tgz 
 
-4. Run the discovery tool:
+4. Run the discovery tool: 
 
 		cd ama-discovery-4.5.0
 		bin/ama-discovery -w ~/IBM/WebSphere/AppServer/
