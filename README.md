@@ -107,9 +107,11 @@ Access AMA via browser using the URL https://rhel9-base.gym.lan:3001.
 2. Download the discovery tool.
 
 	Click on **Open discovery tool** 
+	
 	<kbd>![](./images/media/AMA_OpenDiscoveryTool.png)</kbd>
 
 	Leave the Source Operating System as Linux and click on **Download discovery tool** to download the discovery tool.
+
 	<kbd>![](./images/media/AMA_DownloadDiscoveryTool.png)</kbd>
 
 	The file will be stored under  **~Downloads**
@@ -126,6 +128,13 @@ Access AMA via browser using the URL https://rhel9-base.gym.lan:3001.
 
 		cd ama-discovery-4.5.0
 		bin/ama-discovery -w ~/IBM/WebSphere/AppServer/
+
+
+	Wait until you see a message indicating that the discovery has completed and the collection has been uploaded.
+	<kbd>![](./images/media/AMA_Discovery_Completed.png)</kbd>
+
+
+5. Switch back to theh browser with the AMA (https://rhel9-base.gym.lan:3001).
 
 
 <br>
