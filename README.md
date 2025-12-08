@@ -24,6 +24,20 @@ First you will test the application as is, then you will analyze it for mderniza
 
 ## Preparation:
 
+### Reserve an environment in Techzone
+Please request the following RHEL environment in TechZone.
+https://techzone.ibm.com/my/reservations/create/6920edc50768fd50bcad6e74
+When the environment is provisioned and ready, open the TZ env reservation tile, and select the noVNC published service link in the reservation details page. 
+The NoZNC password is: IBMDem0s!
+
+Comment:
+The environment has the following software installed:
+
+- Application Modernization Accelerator 4.5 
+- Application Modernization Accelerator Development Tools 4.5
+- WAS ND 9.0.5 cell with Deployment Manager and two standalone servers server1 and server2
+- The JAX-RPC application deployed on server1
+
 
 ### Clone the project
 
@@ -37,11 +51,19 @@ First you will test the application as is, then you will analyze it for mderniza
 		chmod 777 /home/techzone/Student/demo-rpc-ws-project/scripts/*.sh
 
 
+
 ### Prepare the environment
 
-1. Start the tWAS environment
+1. Start the WAS ND cell
 
 		~/Student/demo-rpc-ws-project/scripts/startWASEnv.sh
+
+	Alternatively you could also start the servers separately
+
+		~/IBM/WebSphere/AppServer/profiles/Dmgr01/bin/startManager.sh 
+ 		~/IBM/WebSphere/AppServer/profiles/AppSrv01/bin/startNode.sh
+ 		~/IBM/WebSphere/AppServer/profiles/AppSrv02/bin/startNode.sh
+
 
 2. Adjust the JAX-RPC service deployment (map it to server1)
 
