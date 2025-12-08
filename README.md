@@ -181,9 +181,81 @@ Leave the browser open as you will use it later in the demo.
 	<kbd>![](./images/media/JAX-RPC_client_server2_D.png)</kbd>
 
 
-### Assess the application
+### Assess the JAX-RPC service application
 
 1. Access the Application Modernization Accelerator via browser using the URL https://rhel9-base.gym.lan:3001.
+
+2. Explain the Visualzation Panel, where you can see the three discovered applications. 
+	<kbd>![](./images/media/AMA_Visualization_Panel.png)</kbd>
+
+3. Click on **Assessment** to switch to the assessment panel.
+	<kbd>![](./images/media/AMA_Assessment_Panel.png)</kbd>
+
+	Hint: AMA 4.5 does not show AUTOMATED for the DemoRPC applications. 
+
+4. Click on **DemoRPC-1_0_0_war.ear** to see the issues for the JAX-RPC service application.
+	<kbd>![](./images/media/AMA_Assessment_JAX-RPC_Service_1.png)</kbd>
+
+	As you can see, there is 1 issue that needs to be fixed. The estimated development effort for that issue is 5 days.
+
+5. Scroll down to the **Issues** section and you can see that the issue is in the unique code and requires a migration from JAX-RPC to JAX-WS.
+
+	<kbd>![](./images/media/AMA_Assessment_JAX-RPC_Service_2.png)</kbd>
+
+
+6. Open the twisty for the issue and you can see the different migration paths to resolve the issue. You will use the first option which uses the **JAX-RPC Source Migration Helper**.
+
+	<kbd>![](./images/media/AMA_Assessment_JAX-RPC_Service_3.png)</kbd>
+
+7. Click on the blue button on the top, named **View migration plan**.
+
+	<kbd>![](./images/media/AMA_Assessment_JAX-RPC_Service_4.png)</kbd>
+
+8. The migration plan will be generated and made available for download. Click on the blue button on the button, named **Download** to download the plan.
+You will use the plan later on in the AMA Developer tools.
+
+	<kbd>![](./images/media/AMA_Assessment_JAX-RPC_Service_5.png)</kbd>
+
+
+### Assess the JAX-RPC client application
+
+1. Click on the link **JAX-RPC** to switch back to the assessment overview.
+	<kbd>![](./images/media/AMA_Assessment_JAX-RPC_Client_1.png)</kbd>
+
+2. Click on **DemoRPCClient-1_0_0_war.ear** to see the issues for the JAX-RPC client.
+	<kbd>![](./images/media/AMA_Assessment_JAX-RPC_Client_2.png)</kbd>
+
+	As you can see, there is 1 issue that needs to be fixed. The estimated development effort for that issue is 5 days.
+
+3. Scroll down to the **Issues** section and you can see that the issue is in the unique code and requires a migration from JAX-RPC to JAX-WS.
+
+	<kbd>![](./images/media/AMA_Assessment_JAX-RPC_Client_3.png)</kbd>
+
+
+4. Open the twisty for the issue and you can see the different migration paths to resolve the issue. You will use the first option which uses the **JAX-RPC Source Migration Helper**.
+
+	<kbd>![](./images/media/AMA_Assessment_JAX-RPC_Client_4.png)</kbd>
+
+5. Click on the blue button on the top, named **View migration plan**.
+
+	<kbd>![](./images/media/AMA_Assessment_JAX-RPC_Client_5.png)</kbd>
+
+6. The migration plan will be generated and made available for download. Click on the blue button on the button, named **Download** to download the plan.
+You can use the plan later on in the AMA Developer tools.
+
+	<kbd>![](./images/media/AMA_Assessment_JAX-RPC_Client_6.png)</kbd>
+
+
+### Verify that the migration plans have been downloaded
+
+Switch to a terminal window and execute the command
+
+		ls ~/Downloads/Demo*
+
+The following files shhould get listed:
+
+- /home/techzone/Downloads/DemoRPC-1_0_0_war.ear_migrationPlan.zip
+- /home/techzone/Downloads/DemoRPCClient-1_0_0_war.ear_migrationPlan.zip
 
 
 
