@@ -134,8 +134,18 @@ Access AMA via browser using the URL https://rhel9-base.gym.lan:3001.
 	<kbd>![](./images/media/AMA_Discovery_Completed.png)</kbd>
 
 
-5. Switch back to theh browser with the AMA (https://rhel9-base.gym.lan:3001).
+5. Switch back to theh browser with the AMA (https://rhel9-base.gym.lan:3001). You should see a panle like this:
 
+	<kbd>![](./images/media/AMA_Manage_Destination.png)</kbd>
+
+	Select the **radio button** next to Liberty and click **Confirm**
+	<kbd>![](./images/media/AMA_Manage_Destination2.png)</kbd>
+
+
+6. In the Visualzation Panel, you can see the three discovered applications. 
+	<kbd>![](./images/media/AMA_Visualization_Panel.png)</kbd>
+
+Leave the browser open as you will use it later in the demo.
 
 <br>
 
