@@ -25,33 +25,34 @@ First you will test the application as is, then you will analyze it for mderniza
 ## Preparation:
 
 
-### Prepare and build the maven project
+### Clone the project
 
 1. Open a Terminal window.
 
 2. Create a working directory and download the project
 
 		mkdir -p ~/Student
-		git clone https://github.com/LarsBesselmann/JAX-RPC_Demo.git ~/Student/demos
-		git clone https://github.com/LarsBesselmann/JAX-RPC_Demo/demo-rpc-ws-project.git ~/Student/demos
+		git clone https://github.com/LarsBesselmann/JAX-RPC_Demo ~/Student
 		cd  /home/techzone/Student/demo-rpc-ws-project
 		chmod 777 /home/techzone/Student/demo-rpc-ws-project/scripts/*.sh
 
-3. Start the tWAS environment
+
+### Prepare the environment
+
+1. Start the tWAS environment
 
 		~/Student/demo-rpc-ws-project/scripts/startWASEnv.sh
 
-4. Adjust the JAX-RPC service deployment (map it to server1)
+2. Adjust the JAX-RPC service deployment (map it to server1)
 
-		~/IBM/WebSphere/AppServer/profiles/Dmgr01/bin/wsadmin.sh -lang jythin -f ~/Student/demo-rpc-ws-project/scripts/adjust_JAXRPC_service_deployment.py
+		~/IBM/WebSphere/AppServer/profiles/Dmgr01/bin/wsadmin.sh -lang jython -f ~/Student/demo-rpc-ws-project/scripts/adjust_JAXRPC_service_deployment.py
 
-5. Adjust the JAX-RPC client deployment (map it to server2 and change the context root from "/" to "/DemoRPCClient")
+3. Adjust the JAX-RPC client deployment (map it to server2 and change the context root from "/" to "/DemoRPCClient")
 
-		~/IBM/WebSphere/AppServer/profiles/Dmgr01/bin/wsadmin.sh -lang jythin -f ~/Student/demo-rpc-ws-project/scripts/adjust_JAXRPC_client_deployment.py
+		~/IBM/WebSphere/AppServer/profiles/Dmgr01/bin/wsadmin.sh -lang jython -f ~/Student/demo-rpc-ws-project/scripts/adjust_JAXRPC_client_deployment.py
 
-<<<<<<< HEAD
-HINT: If you use your own environment, make sure that the JAX-RPC service is accessible on port 9080.
-=======
+### Test the JAX-RPC application on traditional WAS
+
 
 
 
