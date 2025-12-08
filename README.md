@@ -148,7 +148,6 @@ Access AMA via browser using the URL https://rhel9-base.gym.lan:3001.
 Leave the browser open as you will use it later in the demo.
 
 
-
 <br>
 
 ## Start the demo
