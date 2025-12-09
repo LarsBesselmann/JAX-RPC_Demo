@@ -416,30 +416,31 @@ The following files shhould get listed:
 		<kbd>![](./images/media/AMADevTools_JAXRCP_service_ModernizeToLiberty_25.png)</kbd>
 
 
-
+	<!--
 	3. Update the pom.xml
 		
 			Change to <sourceDirectory>src/main/java</sourceDirectory>
+	-->
 
-	4. Stop server1 which hosts the original JAXRPC-service.
+	3. Stop server1 which hosts the original JAXRPC-service.
 
 			~/IBM/WebSphere/AppServer/profiles/AppSrv01/bin/stopServer.sh server1
 
-	5. In VS Code – Rebuild and package the DemoRPC app by executing in the terminal window the command
+	4. In VS Code – Rebuild and package the DemoRPC app by executing in the terminal window the command
 			
 			mvn clean package
 
 		<kbd>![](./images/media/AMADevTools_JAXRCP_service_ModernizeToLiberty_27.png)</kbd>
 
 
-	6. Start the Liberty instance via Liberty Dashboard
+	5. Start the Liberty instance via Liberty Dashboard
 	
 		<kbd>![](./images/media/AMADevTools_JAXRCP_service_ModernizeToLiberty_28.png)</kbd>
 
 	
-	7. Access the JAX-WS service on Liberty via the URL: http://localhost:9080/DemoRPC/services/DemoRPC
+	6. Access the JAX-WS service on Liberty via the URL: http://localhost:9080/DemoRPC/services/DemoRPC
 	
-	<kbd>![](./images/media/JAX-RPC_service_server1.png)</kbd>
+	<kbd>![](./images/media/JAX-RPC_service_server29.png)</kbd>
 
 
 2. Access the JAX-RPC client via server1 at URL: http://localhost:9082/DemoRPCClient
