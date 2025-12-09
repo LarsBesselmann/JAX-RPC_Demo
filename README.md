@@ -429,8 +429,13 @@ The following files shhould get listed:
 			
 			mvn clean package
 
+		<kbd>![](./images/media/AMADevTools_JAXRCP_service_ModernizeToLiberty_27.png)</kbd>
+
 
 	6. Start the Liberty instance via Liberty Dashboard
+	
+		<kbd>![](./images/media/AMADevTools_JAXRCP_service_ModernizeToLiberty_28.png)</kbd>
+
 	
 	7. Access the JAX-WS service on Liberty via the URL: http://localhost:9080/DemoRPC/services/DemoRPC
 	
