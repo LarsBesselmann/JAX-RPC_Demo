@@ -250,16 +250,40 @@ You can use the plan later on in the AMA Developer tools.
 
 Switch to a terminal window and execute the command
 
-		ls ~/Downloads/Demo*
+	ls ~/Downloads/Demo*
 
 The following files shhould get listed:
 
 - /home/techzone/Downloads/DemoRPC-1_0_0_war.ear_migrationPlan.zip
 - /home/techzone/Downloads/DemoRPCClient-1_0_0_war.ear_migrationPlan.zip
 
+<br>
+
+## Modernize the JAX-RPC service application using the Application Modernization Accellerator Development Tools
+
+1. Open a terminal und switch to the directory containing the JAX-RPC service project. 
+
+		cd ~/Student/demo-rpc-ws-project/DemoRPC
+
+2. Open VS Code
+
+		code .
+
+3. In VS Code, switch to the **Project Explorer**
+
+4. Start the modernization wizard
+	1. Right-click in the project folder on the directory src and select **Modernize Java Applications > Modernize to Liberty**.
+
+	<kbd>![](./images/media/AMADevTools_JAXRCP_service_ModernizeToLiberty_1.png)</kbd>
+
+3. To open the modernization wizard, 1. In the project explorer, right-click in the project folder on the directory src and select Modernize Java Applications > Modernize to Liberty.
+
+	<kbd>![](./images/media/AMADevTools_JAXRCP_service_ModernizeToLiberty_1.png)</kbd>
 
 
-
+2. 
+	
+	<kbd>![](./images/media/AMADevTools_JAXRCP_service_ModernizeToLiberty_1.png)</kbd>
 
 
 
