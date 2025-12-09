@@ -269,6 +269,8 @@ The following files shhould get listed:
 
 		code .
 
+	Ignore any popups and close the Welcome panel.
+
 3. In VS Code, switch to the **Project Explorer**
 
 4. Run the modernization wizard
@@ -281,7 +283,7 @@ The following files shhould get listed:
 		<kbd>![](./images/media/AMADevTools_JAXRCP_service_ModernizeToLiberty_02.png)</kbd>
 
 	
-	3. Select the migration plan that you exported from AMA and click on **Open**. If you followed the instructions, you can find the plan at: 
+	3. Select the migration plan that you exported from AMA and click on **Open**. If you followed the instructions, you can find the migration plan at: 
 
 			/home/techzone/Downloads/DemoRPC-1_0_0_war.ear_migrationPlan.zip
 
@@ -307,7 +309,7 @@ The following files shhould get listed:
 	
 		<kbd>![](./images/media/AMADevTools_JAXRCP_service_ModernizeToLiberty_07.png)</kbd>
 	
-	7. Click on the arrow right to the wsld file.
+	7. Click on the link kwith the wsld file.
 
 		<kbd>![](./images/media/AMADevTools_JAXRCP_service_ModernizeToLiberty_08.png)</kbd>
 	
@@ -315,7 +317,7 @@ The following files shhould get listed:
 
 		<kbd>![](./images/media/AMADevTools_JAXRCP_service_ModernizeToLiberty_09.png)</kbd>
 	
-	9. Open the twisty for the section **Step 1 - Run automation**, then click on the button **Run Automation**.
+	9. Open the twisty for the section **Step 1 - Run automations**, then click on the button **Run Automations**.
 
 		<kbd>![](./images/media/AMADevTools_JAXRCP_service_ModernizeToLiberty_10.png)</kbd>
 
@@ -411,10 +413,13 @@ The following files shhould get listed:
 		
 			cp  ~/Student/demo-rpc-ws-project/artifacts/DemoRPC-server.xml    ~/Student/demo-rpc-ws-project/DemoRPC/src/main/liberty/config/server.xml 
 
+		<kbd>![](./images/media/AMADevTools_JAXRCP_service_ModernizeToLiberty_25.png)</kbd>
+
 
 
 	3. Update the pom.xml
-		Change to <sourceDirectory>src/main/java</sourceDirectory>
+		
+			Change to <sourceDirectory>src/main/java</sourceDirectory>
 
 	4. Stop server1 which hosts the original JAXRPC-service.
 
