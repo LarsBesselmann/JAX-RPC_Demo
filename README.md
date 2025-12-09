@@ -411,3 +411,56 @@ The following files shhould get listed:
 		
 			cp  ~/Student/demo-rpc-ws-project/artifacts/DemoRPC-server.xml    ~/Student/demo-rpc-ws-project/DemoRPC/src/main/liberty/config/server.xml 
 
+
+
+	3. Update the pom.xml
+		Change to <sourceDirectory>src/main/java</sourceDirectory>
+
+	4. Stop server1 which hosts the original JAXRPC-service.
+
+			~/IBM/WebSphere/AppServer/profiles/AppSrv01/bin/stopServer.sh server1
+
+	5. In VS Code – Rebuild and package the DemoRPC app by executing in the terminal window the command
+			
+			mvn clean package
+
+
+	6. Start the Liberty instance via Liberty Dashboard
+	
+	7. Access the JAX-WS service on Liberty via the URL: http://localhost:9080/DemoRPC/services/DemoRPC
+	
+	<kbd>![](./images/media/JAX-RPC_service_server1.png)</kbd>
+
+
+2. Access the JAX-RPC client via server1 at URL: http://localhost:9082/DemoRPCClient
+
+	<kbd>![](./images/media/JAX-RPC_client_server2_A.png)</kbd>
+
+3. Click on the link to access the servlet page **Personal Info Web Service**
+
+	<kbd>![](./images/media/JAX-RPC_client_server2_B.png)</kbd>
+
+4. Enter Jane Doe for the name, then click on **Submit Query** 
+
+	<kbd>![](./images/media/JAX-RPC_client_server2_C.png)</kbd>
+
+	You should get the age and place of birth as response from the JAX-RPC service. 
+
+	<kbd>![](./images/media/JAX-RPC_client_server2_D.png)</kbd>
+
+
+
+ 
+
+ 
+
+ 
+TEST SERVICE: http://rhel9-base.gym.lan:9080/DemoRPC/services/DemoRPC
+
+ 
+Test Service from client:
+ 
+ 
+
+
+**** The modernization of the clients needs to be done ****
