@@ -440,18 +440,18 @@ The following files shhould get listed:
 	
 	6. Access the JAX-WS service on Liberty via the URL: http://localhost:9080/DemoRPC/services/DemoRPC
 	
-	<kbd>![](./images/media/JAX-RPC_service_server29.png)</kbd>
+		<kbd>![](./images/media/AMADevTools_JAXRCP_service_ModernizeToLiberty_29.png)</kbd>
 
 
-2. Access the JAX-RPC client via server1 at URL: http://localhost:9082/DemoRPCClient
+	7. Access the JAX-RPC client via server1 at URL: http://localhost:9082/DemoRPCClient
 
 	<kbd>![](./images/media/JAX-RPC_client_server2_A.png)</kbd>
 
-3. Click on the link to access the servlet page **Personal Info Web Service**
+	8. Click on the link to access the servlet page **Personal Info Web Service**
 
 	<kbd>![](./images/media/JAX-RPC_client_server2_B.png)</kbd>
 
-4. Enter Jane Doe for the name, then click on **Submit Query** 
+	9. Enter Jane Doe for the name, then click on **Submit Query** 
 
 	<kbd>![](./images/media/JAX-RPC_client_server2_C.png)</kbd>
 
