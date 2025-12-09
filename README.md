@@ -443,35 +443,30 @@ The following files shhould get listed:
 		<kbd>![](./images/media/AMADevTools_JAXRCP_service_ModernizeToLiberty_29.png)</kbd>
 
 
-	7. Access the JAX-RPC client via server1 at URL: http://localhost:9082/DemoRPCClient
+	7. Access the JAX-RPC client hosted on tWAS server2 at URL: http://localhost:9082/DemoRPCClient
 
-	<kbd>![](./images/media/JAX-RPC_client_server2_A.png)</kbd>
+		<kbd>![](./images/media/AMADevTools_JAXRCP_service_ModernizeToLiberty_30.png)</kbd>
 
 	8. Click on the link to access the servlet page **Personal Info Web Service**
 
-	<kbd>![](./images/media/JAX-RPC_client_server2_B.png)</kbd>
+		<kbd>![](./images/media/AMADevTools_JAXRCP_service_ModernizeToLiberty_31.png)</kbd>
 
-	9. Enter Jane Doe for the name, then click on **Submit Query** 
+	9. Enter John Doe as name, then click on **Submit Query** 
 
-	<kbd>![](./images/media/JAX-RPC_client_server2_C.png)</kbd>
+		<kbd>![](./images/media/AMADevTools_JAXRCP_service_ModernizeToLiberty_32.png)</kbd>
 
-	You should get the age and place of birth as response from the JAX-RPC service. 
+		You should get the age and place of birth as response from the JAX-WS service. 
 
-	<kbd>![](./images/media/JAX-RPC_client_server2_D.png)</kbd>
+		<kbd>![](./images/media/AMADevTools_JAXRCP_service_ModernizeToLiberty_33.png)</kbd>
 
 
 
+ SUCCESS: 
+
+ You successfully converted a JAX-RPC service toi JAX-WS so that it can run on Liberty. As you have seen, the interoperability between the JAX-RPC client running on traditional WAS and the JAX-WS service running on Liberty works.
  
-
- 
-
- 
-TEST SERVICE: http://rhel9-base.gym.lan:9080/DemoRPC/services/DemoRPC
-
- 
-Test Service from client:
- 
- 
+The next step is now to convert the JAX-RPC client to JAX-WS, so that it can run on Liberty as well.
 
 
-**** The modernization of the clients needs to be done ****
+## Modernize the JAX-RPC client application using the Application Modernization Accellerator Development Tools
+
