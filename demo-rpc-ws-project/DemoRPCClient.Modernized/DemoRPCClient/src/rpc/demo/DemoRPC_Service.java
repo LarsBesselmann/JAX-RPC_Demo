@@ -90,13 +90,13 @@ public class DemoRPC_Service
     }
 
     // Use to get a proxy class for demoRPC
-    private final java.lang.String demoRPC_address = "rhel9-base.gym.lan:9081/DemoRPC/services/DemoRPC";
+    private final java.lang.String demoRPC_address = "rhel9-base.gym.lan:9080/DemoRPC/services/DemoRPC";
 
     public String getDemoRPCAddresses() {
         if (overriddenURLAddress == null) {
             overriddenURLAddress = System.getProperty("overriddenURLAddress");
             if (overriddenURLAddress == null) {
-                overriddenURLAddress = "http://rhel9-base.gym.lan:9081/DemoRPC/services/DemoRPC";
+                overriddenURLAddress = "http://rhel9-base.gym.lan:9080/DemoRPC/services/DemoRPC";
             }
         }
         return overriddenURLAddress;
