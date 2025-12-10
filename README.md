@@ -779,20 +779,15 @@ SUCCESS:
 
 	17. Make sure that the build is successful.
 
-		<kbd>![](./images/media/AMADevTools_JAXRCP_service_ModernizeToLiberty_21.png)</kbd>
+		<kbd>![](./images/media/AMADevTools_JAXRCP_client_ModernizeToLiberty_19.png)</kbd>
 
 		Then click on **Proceed**.
 
-		<kbd>![](./images/media/AMADevTools_JAXRCP_service_ModernizeToLiberty_22.png)</kbd>
-
 	18. The panel should indicate that there are no issues left.
 
-		<kbd>![](./images/media/AMADevTools_JAXRCP_service_ModernizeToLiberty_23.png)</kbd>
+		<kbd>![](./images/media/AMADevTools_JAXRCP_client_ModernizeToLiberty_20.png)</kbd>
 
 		Close the modernization wizard.
-
-
-**WORK in PROGRESS**
 
 
 5. Complete the manual updates required for Liberty deployment  
@@ -813,16 +808,18 @@ SUCCESS:
         			<feature>jsp-2.3</feature>
     			</featureManager>
 
-    			<variable name="http.port" defaultValue="9080"/>
-    			<variable name="https.port" defaultValue="9443"/>
+    			<variable name="http.port" defaultValue="9082"/>
+    			<variable name="https.port" defaultValue="9445"/>
     			<variable name="app.context.root" value="/"/>
+
     			<!-- tag::httpEndpoint[] -->
     			<httpEndpoint httpPort="${http.port}"
-                	  httpsPort="${https.port}" id="defaultHttpEndpoint"  host="*" />
+                		  httpsPort="${https.port}" id="defaultHttpEndpoint"  host="*" />
     			<!-- end::httpEndpoint[] -->
-    			<webApplication id="ServletSample" location="test-project-1.0.0.war" contextRoot="${app.context.root}" />
+    			<!-- <webApplication id="ServletSample" location="test-project-1.0.0.war" contextRoot="${app.context.root}" /> -->
 				<!-- TODO: note for the user to set the contextRoot based on their old WSDL/url/endpoint -->
 			</server>
+
 
 	2. To ease the cleanup of the server.xml, replace the server.xml in the project with a preparated one:
 
@@ -831,6 +828,11 @@ SUCCESS:
 			cp  ~/Student/demo-rpc-ws-project/artifacts/DemoRPC-server.xml    ~/Student/demo-rpc-ws-project/DemoRPC/src/main/liberty/config/server.xml 
 
 		<kbd>![](./images/media/AMADevTools_JAXRCP_service_ModernizeToLiberty_25.png)</kbd>
+
+
+
+
+**WORK in PROGRESS**
 
 
 	<!--
