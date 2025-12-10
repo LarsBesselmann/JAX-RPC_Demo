@@ -585,6 +585,9 @@ As the steps for the conversion of the JAX-RPC-CLient are the same as for the JA
 
 	2. Test that the aceess from the JAX-WS client to the JAX-WS service fails.
 
+
+		<kbd>![](./images/media/AMADevTools_JAXRCP_client_ModernizedToLiberty_07.png)</kbd>
+
 	3. Start server1 which hosts the original JAXRPC-service.
 
 			~/IBM/WebSphere/AppServer/profiles/AppSrv01/bin/startServer.sh server1
