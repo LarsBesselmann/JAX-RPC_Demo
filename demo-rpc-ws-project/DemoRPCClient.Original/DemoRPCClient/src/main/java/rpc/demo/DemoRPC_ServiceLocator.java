@@ -17,7 +17,7 @@ public class DemoRPC_ServiceLocator extends com.ibm.ws.webservices.multiprotocol
     }
 
     // Use to get a proxy class for demoRPC
-    private final java.lang.String demoRPC_address = "http://twccm1.fyre.ibm.com:9080/DemoRPC/services/DemoRPC";
+    private final java.lang.String demoRPC_address = "http://localhost:9080/DemoRPC/services/DemoRPC";
 
     public java.lang.String getDemoRPCAddress() {
         if (context.getOverriddingEndpointURIs() == null) {
