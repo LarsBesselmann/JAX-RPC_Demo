@@ -528,7 +528,7 @@ Make sure that the environment is running:
 
 4. Copy the already converted client project
 
-		cp -r ~/Student/demo-rpc-ws-project/DemoRPCClient.Modernized/DemoRPCClient* .
+		cp -r ~/Student/demo-rpc-ws-project/DemoRPCClient.Modernized/DemoRPCClient* ~/Student/demo-rpc-ws-project
 
 5. Switch to the client project and open it in VS Code
 
