@@ -602,6 +602,32 @@ As the steps for the conversion of the JAX-RPC-CLient are the same as for the JA
 
 		<kbd>![](./images/media/AMADevTools_JAXRCP_client_ModernizedToLiberty_08.png)</kbd>
 
+5. Clean up:
+
+	1. Stop server1 which hosts the original JAXRPC-service.
+
+			~/IBM/WebSphere/AppServer/profiles/AppSrv01/bin/stopServer.sh server1
+	
+	2. Stop the Liberty server hosting the client
+	
+		Switch to VC Code and use the Liberty dashboard to stop the server.
+	
+	3. Close VS Code.
+	
+	4. Stop the WAS ND Deployment Manager and the two node agents
+	
+		~/Student/demo-rpc-ws-project/scripts/stopWASEnv.sh
+
+		Alternatively you could also start the components separately
+
+		~/IBM/WebSphere/AppServer/profiles/AppSrv01/bin/stopNode.sh 
+		~/IBM/WebSphere/AppServer/profiles/AppSrv02/bin/stopNode.sh 
+		~/IBM/WebSphere/AppServer/profiles/Dmgr01/bin/stopManager.sh
+		
+	5. Remove the project directory
+
+		rm -rf ~/Student
+
 
 
 SUCCESS: 
