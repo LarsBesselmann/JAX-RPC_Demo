@@ -530,8 +530,18 @@ Make sure that the environment is running:
 
 		cp -r ~/Student/demo-rpc-ws-project/DemoRPCClient.Modernized/DemoRPCClient* ~/Student/demo-rpc-ws-project
 
-5. Switch to the client project and open it in VS Code
+5. Switch to the client project and review the project.
+
+	1. Open the project in VS Code
 
 		cd ~/Student/demo-rpc-ws-project/DemoRPCClient
 		code .
 
+	2. Review the **server.xml** file
+
+		<kbd>![](./images/media/AMADevTools_JAXRCP_client_ModernizedToLiberty_01.png)</kbd>
+
+	3. Start the Liberty server via **Liberty dashboard** 
+
+		<kbd>![](./images/media/AMADevTools_JAXRCP_client_ModernizedToLiberty_02.png)</kbd>
+		

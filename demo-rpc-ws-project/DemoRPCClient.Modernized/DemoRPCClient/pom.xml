@@ -43,7 +43,7 @@
             <artifactId>com.ibm.ws.webservices.thinclient_9.0</artifactId>
             <version>9.0</version>
             <scope>system</scope>
-            <systemPath>${basedir}/../../com.ibm.ws.webservices.thinclient_9.0.jar</systemPath>
+            <systemPath>${basedir}/../com.ibm.ws.webservices.thinclient_9.0.jar</systemPath>
         </dependency>
         <!-- https://mvnrepository.com/artifact/javax.xml.rpc/javax.xml.rpc-api -->
         <dependency>
