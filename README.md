@@ -795,7 +795,7 @@ SUCCESS:
 	1. Switch to the **VS Code Project Explorer** and open the **server.xml** file that has been imported from the migration plan. The server.xml file is located in the folder **/src/main/liberty/config**
 	As you can see, the jaxws-2.2 feature is missing.
 
-		<kbd>![](./images/media/AMADevTools_JAXRCP_service_ModernizeToLiberty_24.png)</kbd>
+		<kbd>![](./images/media/AMADevTools_JAXRCP_client_ModernizeToLiberty_21.png)</kbd>
 
 		There are also some other settings that you do not need at the moment like the federated repository. A basic server.xml looks like this:
 
@@ -825,7 +825,7 @@ SUCCESS:
 
 		In VSCode, switch to the terminal and execute the command:
 		
-			cp  ~/Student/demo-rpc-ws-project/artifacts/DemoRPC-server.xml    ~/Student/demo-rpc-ws-project/DemoRPC/src/main/liberty/config/server.xml 
+			cp  ~/Student/demo-rpc-ws-project/artifacts/DemoRPCClient-server.xml    ~/Student/demo-rpc-ws-project/DemoRPCClient/src/main/liberty/config/server.xml 
 
 		<kbd>![](./images/media/AMADevTools_JAXRCP_service_ModernizeToLiberty_25.png)</kbd>
 
