@@ -469,6 +469,9 @@ The following files shhould get listed:
 		
 		~/Student/demo-rpc-ws-project/DemoRPC/target/liberty/wlp/bin/server start defaultServer
 
+	Hint: You can also find the completed project here:
+	~/Student/demo-rpc-ws-project/artifacts/DemoRPC_completed.zip
+
 
  SUCCESS: 
 
@@ -479,3 +482,20 @@ The next step is now to convert the JAX-RPC client to JAX-WS, so that it can run
 
 ## Modernize the JAX-RPC client application using the Application Modernization Accellerator Development Tools
 
+For the conversion of the JAX-RPC client to JAX-WS the same steps as for the service are required. Based on this, there are two options:
+
+- Fast path: Use the already migrated client nd test it on Liberty
+- Details path: Use AMA with the migration plan and do the required steps 
+
+### Fast path: Use the already migrated client nd test it on Liberty
+
+1. Open a terminal window and copy the already converted client project
+
+	cp -r ~/Student/demo-rpc-ws-project/DemoRPCClient.Modernized/DemoRPCClient* .
+
+2. Switch to the client project and open it in VS Code
+
+	cd ~/Student/demo-rpc-ws-project/DemoRPCClient
+	code .
+
+	
