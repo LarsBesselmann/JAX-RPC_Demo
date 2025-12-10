@@ -489,7 +489,7 @@ To switch to the completed project, use the commands:
 		mv DemoRPC DemoRPC.ori
 		unzip artifacts/DemoRPC_completed.zip 
 
-To start the JAX-WS service without Liberty dashboard, you can use the following commands:
+To start the JAX-WS service in dev mode without Liberty dashboard, you can use the following commands:
 
 	cd ~/Student/demo-rpc-ws-project/DemoRPC/
 	mvn io.openliberty.tools:liberty-maven-plugin:dev -f pom.xml
