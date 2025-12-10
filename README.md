@@ -827,22 +827,17 @@ SUCCESS:
 		
 			cp  ~/Student/demo-rpc-ws-project/artifacts/DemoRPCClient-server.xml ~/Student/demo-rpc-ws-project/DemoRPCClient/src/main/liberty/config/server.xml 
 
-		<kbd>![](./images/media/AMADevTools_JAXRCP_service_ModernizeToLiberty_25.png)</kbd>
+		<kbd>![](./images/media/AMADevTools_JAXRCP_client_ModernizeToLiberty_22.png)</kbd>
 
 
-
-	3. Stop server1 which hosts the original JAXRPC-service.
-
-			~/IBM/WebSphere/AppServer/profiles/AppSrv01/bin/stopServer.sh server1
-
-	4. In VS Code – Rebuild and package the DemoRPC app by executing in the terminal window the command
+	3. In VS Code – Rebuild and package the DemoRPC app by executing in the terminal window the command
 			
 			mvn clean package
 
-		<kbd>![](./images/media/AMADevTools_JAXRCP_service_ModernizeToLiberty_27.png)</kbd>
+		<kbd>![](./images/media/AMADevTools_JAXRCP_client_ModernizeToLiberty_23.png)</kbd>
 
 
-	5. Start the Liberty instance via Liberty Dashboard
+	4. Start the Liberty instance via Liberty Dashboard
 	
 		<kbd>![](./images/media/AMADevTools_JAXRCP_service_ModernizeToLiberty_28.png)</kbd>
 
