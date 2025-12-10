@@ -527,7 +527,7 @@ Make sure that the environment is running:
 
 
 ### Fast path: Use the already migrated client and test it on Liberty
-
+As the steps for the conversion of the JAX-RPC-CLient are the same as for the JAX-RPC service, an already updated project has been provided. You can use that project to just test the end-2-end scenario JAX-WS client to JAX-WS service, both running on Liberty.
 
 1. Copy the already converted client project
 
