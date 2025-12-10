@@ -556,6 +556,23 @@ Make sure that the environment is running:
 
 	2. Click on the link to access the servlet page **Personal Info Web Service**, enter the name and click on SubnitQuery.
 
-		<kbd>![](./images/media/AMADevTools_JAXRCP_service_ModernizeToLiberty_32.png)</kbd>
+		<kbd>![](./images/media/AMADevTools_JAXRCP_client_ModernizedToLiberty_04.png)</kbd>
 
-		Verify that the service works.
+	3. Review the logs of the Liberty server hosting the JAX-WS service 
+
+		tail -n 9 ~/Student/demo-rpc-ws-project/DemoRPC/target/liberty/wlp/usr/servers/defaultServer/logs/messages.log
+
+		You should find entries indicating that the service has been called by the client **DemoRPCClient-1.0.0** for the person **Jane Doe**
+
+		<kbd>![](./images/media/AMADevTools_JAXRCP_client_ModernizedToLiberty_05.png)</kbd>
+
+		End the command
+
+	4. Review the logs of the Liberty server hosting the JAX-WS client 
+
+		tail -n 6 ~/Student/demo-rpc-ws-project/DemoRPCClient/target/liberty/wlp/usr/servers/defaultServer/logs/messages.log 
+
+		You should find entries indicating that the client **DemoRPCClient-1.0.0** initialized the servlet **DemoRPCServlet**.
+
+		<kbd>![](./images/media/AMADevTools_JAXRCP_client_ModernizedToLiberty_06.png)</kbd>
+
