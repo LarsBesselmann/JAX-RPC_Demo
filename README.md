@@ -549,8 +549,8 @@ As the steps for the conversion of the JAX-RPC-CLient are the same as for the JA
 
 	1. Open the project in VS Code
 
-		cd ~/Student/demo-rpc-ws-project/DemoRPCClient
-		code .
+			cd ~/Student/demo-rpc-ws-project/DemoRPCClient
+			code .
 
 	2. Review the **server.xml** file
 
@@ -667,8 +667,8 @@ SUCCESS:
 
 	1. Open the project in VS Code
 
-		cd ~/Student/demo-rpc-ws-project/DemoRPCClient
-		code .
+			cd ~/Student/demo-rpc-ws-project/DemoRPCClient
+			code .
 
 	2. Review the **server.xml** file
 
