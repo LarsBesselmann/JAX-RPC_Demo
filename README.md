@@ -535,7 +535,7 @@ Make sure that the environment is running:
 		
 			~/IBM/WebSphere/AppServer/profiles/AppSrv02/bin/startServer.sh server2
 
-	3. Click on the link to access the servlet page **Personal Info Web Service**, enter the name and click on SubnitQuery.
+	3. Click on the link to access the servlet page **Personal Info Web Service**, enter the name and click on SubmitQuery.
 
 		<kbd>![](./images/media/AMADevTools_JAXRCP_service_ModernizeToLiberty_32.png)</kbd>
 
@@ -574,7 +574,7 @@ As the steps for the conversion of the JAX-RPC-CLient are the same as for the JA
 
 		<kbd>![](./images/media/AMADevTools_JAXRCP_client_ModernizedToLiberty_03.png)</kbd>
 
-	3. Click on the link to access the servlet page **Personal Info Web Service**, enter the name and click on SubnitQuery.
+	3. Click on the link to access the servlet page **Personal Info Web Service**, enter the name and click on SubmitQuery.
 
 		<kbd>![](./images/media/AMADevTools_JAXRCP_client_ModernizedToLiberty_04.png)</kbd>
 
@@ -844,7 +844,7 @@ SUCCESS:
 
 		<kbd>![](./images/media/AMADevTools_JAXRCP_client_ModernizeToLiberty_25.png)</kbd>
 
-	3. Click on the link to access the servlet page **Personal Info Web Service**, enter the name and click on SubnitQuery.
+	3. Click on the link to access the servlet page **Personal Info Web Service**, enter the name and click on SubmitQuery.
 
 		<kbd>![](./images/media/AMADevTools_JAXRCP_client_ModernizeToLiberty_26.png)</kbd>
 		
@@ -856,10 +856,6 @@ SUCCESS:
 
 		<kbd>![](./images/media/AMADevTools_JAXRCP_client_ModernizedToLiberty_05.png)</kbd>
 
-
-**** Work in progress ***
-
-
 	5. Review the logs of the Liberty server hosting the JAX-WS client 
 
 		tail -n 6 ~/Student/demo-rpc-ws-project/DemoRPCClient/target/liberty/wlp/usr/servers/defaultServer/logs/messages.log 
@@ -867,6 +863,9 @@ SUCCESS:
 		You should find entries indicating that the client **DemoRPCClient-1.0.0** initialized the servlet **DemoRPCServlet**.
 
 		<kbd>![](./images/media/AMADevTools_JAXRCP_client_ModernizedToLiberty_06.png)</kbd>
+
+**** Work in progress ***
+
 
 
 4. Test the converted client with the original JAX-RPC service running on tWAS.
@@ -982,7 +981,7 @@ The next step is now to convert the JAX-RPC client to JAX-WS, so that it can run
 
 		<kbd>![](./images/media/AMADevTools_JAXRCP_client_ModernizedToLiberty_03.png)</kbd>
 
-	3. Click on the link to access the servlet page **Personal Info Web Service**, enter the name and click on SubnitQuery.
+	3. Click on the link to access the servlet page **Personal Info Web Service**, enter the name and click on SubmitQuery.
 
 		<kbd>![](./images/media/AMADevTools_JAXRCP_client_ModernizedToLiberty_04.png)</kbd>
 
