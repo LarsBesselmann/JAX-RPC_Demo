@@ -501,7 +501,7 @@ To start the JAX-WS service without Liberty dashboard, you can use the following
 For the conversion of the JAX-RPC client to JAX-WS the same steps as for the service are required. Based on this, there are two options:
 
 - Fast path: Use the already migrated client and test it on Liberty
-- Details path: Use AMA with the migration plan and do the required steps 
+- Detailed path: Use AMA with the migration plan and do the required steps 
 
 ### Preparation
 Make sure that the environment is running:
