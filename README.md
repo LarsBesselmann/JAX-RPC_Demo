@@ -317,7 +317,7 @@ The following files shhould get listed:
 	
 		<kbd>![](./images/media/AMADevTools_JAXRCP_service_ModernizeToLiberty_07.png)</kbd>
 	
-	7. Click on the link kwith the wsld file.
+	7. Click on the link with the wsld file.
 
 		<kbd>![](./images/media/AMADevTools_JAXRCP_service_ModernizeToLiberty_08.png)</kbd>
 	
@@ -709,75 +709,73 @@ SUCCESS:
 	
 		<kbd>![](./images/media/AMADevTools_JAXRCP_client_ModernizeToLiberty_05.png)</kbd>
 
-**WORK in PROGRESS**
-
-
-
-
-
-	6. On the **JAX-RPC Source Migration Helper** panel, open the twisty for **Module: DemoRPC**.
+	6. On the **JAX-RPC Source Migration Helper** panel, open the twisty for **Module: DemoRPCClient** (if not already open). 
 	
-		<kbd>![](./images/media/AMADevTools_JAXRCP_service_ModernizeToLiberty_06.png)</kbd>
+		Then open the twisty right to section **Pending**  (if not already open).
+	
+		<kbd>![](./images/media/AMADevTools_JAXRCP_client_ModernizeToLiberty_06.png)</kbd>
 
 
-		Then open the twisty right to section **Pending**.
-	
-		<kbd>![](./images/media/AMADevTools_JAXRCP_service_ModernizeToLiberty_07.png)</kbd>
-	
-	7. Click on the link kwith the wsld file.
+	7. Click on the link with the wsld file.
 
-		<kbd>![](./images/media/AMADevTools_JAXRCP_service_ModernizeToLiberty_08.png)</kbd>
+		<kbd>![](./images/media/AMADevTools_JAXRCP_client_ModernizeToLiberty_07.png)</kbd>
 	
+
 	8. The next panel shows the steps that need to be performed.
 
-		<kbd>![](./images/media/AMADevTools_JAXRCP_service_ModernizeToLiberty_09.png)</kbd>
+		<kbd>![](./images/media/AMADevTools_JAXRCP_client_ModernizeToLiberty_08.png)</kbd>
 	
+
 	9. Open the twisty for the section **Step 1 - Run automations**, then click on the button **Run Automations**.
 
-		<kbd>![](./images/media/AMADevTools_JAXRCP_service_ModernizeToLiberty_10.png)</kbd>
+		<kbd>![](./images/media/AMADevTools_JAXRCP_client_ModernizeToLiberty_09.png)</kbd>
 
 	10. Wait until you get the feedback **Automations applied**.
 
-		<kbd>![](./images/media/AMADevTools_JAXRCP_service_ModernizeToLiberty_11.png)</kbd>
+		<kbd>![](./images/media/AMADevTools_JAXRCP_client_ModernizeToLiberty_10.png)</kbd>
+
 
 	11. Close the twisty for **Run automations** and open the twisty for **Manual updates**.
 
-		<kbd>![](./images/media/AMADevTools_JAXRCP_service_ModernizeToLiberty_12.png)</kbd>
+		<kbd>![](./images/media/AMADevTools_JAXRCP_client_ModernizeToLiberty_11.png)</kbd>
 
 		As you can see, there are no methods that need to be update.
 
+
 	12. Scroll down to the section **Additional Manual Updates** which lists general updates that need to be evaluated.
 
-		<kbd>![](./images/media/AMADevTools_JAXRCP_service_ModernizeToLiberty_13.png)</kbd>
+		<kbd>![](./images/media/AMADevTools_JAXRCP_client_ModernizeToLiberty_12.png)</kbd>
 
 		Review those updates, then select **Mark all as done**.
 
-		<kbd>![](./images/media/AMADevTools_JAXRCP_service_ModernizeToLiberty_14.png)</kbd>
+		<kbd>![](./images/media/AMADevTools_JAXRCP_client_ModernizeToLiberty_13.png)</kbd>
 
 
 	13. Close the section **Manual updates** and open the section **Step 3 - Review newly generated files**. 
 
-		<kbd>![](./images/media/AMADevTools_JAXRCP_service_ModernizeToLiberty_15.png)</kbd>
+		<kbd>![](./images/media/AMADevTools_JAXRCP_client_ModernizeToLiberty_14.png)</kbd>
 
 		Feel free to review the generated files, then select **Mark as done**.
 
-		<kbd>![](./images/media/AMADevTools_JAXRCP_service_ModernizeToLiberty_16.png)</kbd>
+		<kbd>![](./images/media/AMADevTools_JAXRCP_client_ModernizeToLiberty_15.png)</kbd>
+
 
 	14. Close the section **Step 3 - Review newly generated files** and open the section **Step 4 - Compile application files**. 
 
-		<kbd>![](./images/media/AMADevTools_JAXRCP_service_ModernizeToLiberty_17.png)</kbd>
-
+		
 		You will compile the application later, so just select **Mark as done**. 
 		
-		<kbd>![](./images/media/AMADevTools_JAXRCP_service_ModernizeToLiberty_18.png)</kbd>
+		<kbd>![](./images/media/AMADevTools_JAXRCP_client_ModernizeToLiberty_16.png)</kbd>
+
 
 	15. Click on the link **Back** at the top of the wizard.
 
-		<kbd>![](./images/media/AMADevTools_JAXRCP_service_ModernizeToLiberty_19.png)</kbd>
+		<kbd>![](./images/media/AMADevTools_JAXRCP_client_ModernizeToLiberty_17.png)</kbd>
 
 	16. Back on the main page, click on **Build and analyze**.
 	
-		<kbd>![](./images/media/AMADevTools_JAXRCP_service_ModernizeToLiberty_20.png)</kbd>
+		<kbd>![](./images/media/AMADevTools_JAXRCP_client_ModernizeToLiberty_18.png)</kbd>
+
 
 	17. Make sure that the build is successful.
 
@@ -792,6 +790,10 @@ SUCCESS:
 		<kbd>![](./images/media/AMADevTools_JAXRCP_service_ModernizeToLiberty_23.png)</kbd>
 
 		Close the modernization wizard.
+
+
+**WORK in PROGRESS**
+
 
 5. Complete the manual updates required for Liberty deployment  
 
