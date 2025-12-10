@@ -854,11 +854,11 @@ SUCCESS:
 
 		You should find entries indicating that the service has been called by the client **DemoRPCClient-1.0.0** for the person **Jane Doe**
 
-		<kbd>![](./images/media/AMADevTools_JAXRCP_client_ModernizedToLiberty_05.png)</kbd>
+		<kbd>![](./images/media/AMADevTools_JAXRCP_client_ModernizeToLiberty_27.png)</kbd>
 
 	5. Review the logs of the Liberty server hosting the JAX-WS client 
 
-		tail -n 6 ~/Student/demo-rpc-ws-project/DemoRPCClient/target/liberty/wlp/usr/servers/defaultServer/logs/messages.log 
+			tail -n 6 ~/Student/demo-rpc-ws-project/DemoRPCClient/target/liberty/wlp/usr/servers/defaultServer/logs/messages.log 
 
 		You should find entries indicating that the client **DemoRPCClient-1.0.0** initialized the servlet **DemoRPCServlet**.
 
