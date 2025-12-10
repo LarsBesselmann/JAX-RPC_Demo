@@ -581,7 +581,7 @@ As the steps for the conversion of the JAX-RPC-CLient are the same as for the JA
 
 	1. Stop the Liberty server hosting the JAX-WS service
 
-			~/Student/demo-rpc-ws-project/DemoRPC/target/liberty/wlp/bin/server start defaultServer
+			~/Student/demo-rpc-ws-project/DemoRPC/target/liberty/wlp/bin/server stop defaultServer
 
 	2. Test that the aceess from the JAX-WS client to the JAX-WS service fails.
 
