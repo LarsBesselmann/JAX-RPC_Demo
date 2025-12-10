@@ -160,6 +160,9 @@ Leave the browser open as you will use it later in the demo.
 
 ## Start the demo
 
+<details open>
+<summary>Test the JAX-RPC application on traditional WAS</summary>
+
 ### Test the JAX-RPC application on traditional WAS
 
 1. Start the tWAS servers server1 and server2
@@ -188,6 +191,9 @@ Leave the browser open as you will use it later in the demo.
 
 	<kbd>![](./images/media/JAX-RPC_client_server2_D.png)</kbd>
 
+</details>
+<details open>
+<summary>Assess the JAX-RPC service application</summary>
 
 ### Assess the JAX-RPC service application
 
@@ -266,6 +272,10 @@ The following files shhould get listed:
 - /home/techzone/Downloads/DemoRPCClient-1_0_0_war.ear_migrationPlan.zip
 
 <br>
+
+</details>
+<details open>
+<summary>Modernize the JAX-RPC service application using the Application Modernization Accellerator Development Tools</summary>
 
 ## Modernize the JAX-RPC service application using the Application Modernization Accellerator Development Tools
 
@@ -504,6 +514,10 @@ To start the JAX-WS service in dev mode without Liberty dashboard, you can use t
 
 <br>
 
+</details>
+<details open>
+<summary>Modernize the JAX-RPC client application using the Application Modernization Accellerator Development Tools</summary>
+
 ## Modernize the JAX-RPC client application using the Application Modernization Accellerator Development Tools
 
 For the conversion of the JAX-RPC client to JAX-WS the same steps as for the service are required. Based on this, there are two options:
@@ -544,6 +558,11 @@ Make sure that the environment is running:
 3. Open a terminal window and stop the server hosting the JAXRPC-client.
 
 		~/IBM/WebSphere/AppServer/profiles/AppSrv02/bin/stopServer.sh server2
+
+
+</details>
+<details open>
+<summary>Fast path: Use the already migrated client and test it on Liberty</summary>
 
 
 ### Fast path: Use the already migrated client and test it on Liberty
@@ -656,6 +675,9 @@ SUCCESS:
  This concludes the fastpath section for the JAX-RPC client conversion.
  If you are interested how the updated client was generated, take a look at the next section.
 
+</details>
+<details open>
+<summary>Detailed path: Use AMA with the migration plan and do the required steps </summary>
 
  ### Detailed path: Use AMA with the migration plan and do the required steps 
 
@@ -862,10 +884,7 @@ SUCCESS:
 
 		You should find entries indicating that the client **DemoRPCClient-1.0.0** initialized the servlet **DemoRPCServlet**.
 
-		<kbd>![](./images/media/AMADevTools_JAXRCP_client_ModernizedToLiberty_06.png)</kbd>
-
-**** Work in progress ***
-
+		<kbd>![](./images/media/AMADevTools_JAXRCP_client_ModernizeToLiberty_28.png)</kbd>
 
 
 4. Test the converted client with the original JAX-RPC service running on tWAS.
@@ -920,138 +939,6 @@ SUCCESS:
 			rm -rf ~/Student
 
 
-
-SUCCESS: 
-
-
-
-	6. Access the JAX-WS service on Liberty via the URL: http://localhost:9080/DemoRPC/services/DemoRPC
-	
-		<kbd>![](./images/media/AMADevTools_JAXRCP_service_ModernizeToLiberty_29.png)</kbd>
-
-
-	7. Access the JAX-RPC client hosted on tWAS server2 at URL: http://localhost:9082/DemoRPCClient
-
-		<kbd>![](./images/media/AMADevTools_JAXRCP_service_ModernizeToLiberty_30.png)</kbd>
-
-	8. Click on the link to access the servlet page **Personal Info Web Service**
-
-		<kbd>![](./images/media/AMADevTools_JAXRCP_service_ModernizeToLiberty_31.png)</kbd>
-
-	9. Enter John Doe as name, then click on **Submit Query** 
-
-		<kbd>![](./images/media/AMADevTools_JAXRCP_service_ModernizeToLiberty_32.png)</kbd>
-
-		You should get the age and place of birth as response from the JAX-WS service. 
-
-		<kbd>![](./images/media/AMADevTools_JAXRCP_service_ModernizeToLiberty_33.png)</kbd>
-
-	10. Stop the Liberty instance via Liberty Dashboard
-	
-		<kbd>![](./images/media/AMADevTools_JAXRCP_service_ModernizeToLiberty_34.png)</kbd>
-
-	11. Close VS Code
-
-	HINT: If you want to start the server again, you could do it directly via the command:
-		
-		~/Student/demo-rpc-ws-project/DemoRPC/target/liberty/wlp/bin/server start defaultServer
-
-	
- SUCCESS: 
-
- You successfully converted a JAX-RPC service to JAX-WS so that it can run on Liberty. As you have seen, the interoperability between the JAX-RPC client running on traditional WAS and the JAX-WS service running on Liberty works.
- 
-The next step is now to convert the JAX-RPC client to JAX-WS, so that it can run on Liberty as well.
-
-
-	2. Review the **server.xml** file
-
-		<kbd>![](./images/media/AMADevTools_JAXRCP_client_ModernizedToLiberty_01.png)</kbd>
-
-	3. Start the Liberty server via **Liberty dashboard** 
-
-		<kbd>![](./images/media/AMADevTools_JAXRCP_client_ModernizedToLiberty_02.png)</kbd>
-		
-3. Test the converted client
-
-	1. Start the Liberty server via **Liberty dashboard** 
-
-		<kbd>![](./images/media/AMADevTools_JAXRCP_client_ModernizedToLiberty_02.png)</kbd>
-	2. Access the JAX-WS client hosted on Liberty at URL: http://localhost:9082/DemoRPCClient-1.0.0 
-
-		<kbd>![](./images/media/AMADevTools_JAXRCP_client_ModernizedToLiberty_03.png)</kbd>
-
-	3. Click on the link to access the servlet page **Personal Info Web Service**, enter the name and click on SubmitQuery.
-
-		<kbd>![](./images/media/AMADevTools_JAXRCP_client_ModernizedToLiberty_04.png)</kbd>
-
-	4. Review the logs of the Liberty server hosting the JAX-WS service 
-
-		tail -n 9 ~/Student/demo-rpc-ws-project/DemoRPC/target/liberty/wlp/usr/servers/defaultServer/logs/messages.log
-
-		You should find entries indicating that the service has been called by the client **DemoRPCClient-1.0.0** for the person **Jane Doe**
-
-		<kbd>![](./images/media/AMADevTools_JAXRCP_client_ModernizedToLiberty_05.png)</kbd>
-
-	5. Review the logs of the Liberty server hosting the JAX-WS client 
-
-		tail -n 6 ~/Student/demo-rpc-ws-project/DemoRPCClient/target/liberty/wlp/usr/servers/defaultServer/logs/messages.log 
-
-		You should find entries indicating that the client **DemoRPCClient-1.0.0** initialized the servlet **DemoRPCServlet**.
-
-		<kbd>![](./images/media/AMADevTools_JAXRCP_client_ModernizedToLiberty_06.png)</kbd>
-
-
-4. Test the converted client with the original JAX-RPC service running on tWAS.
-
-	1. Stop the Liberty server hosting the JAX-WS service
-
-			~/Student/demo-rpc-ws-project/DemoRPC/target/liberty/wlp/bin/server stop defaultServer
-
-	2. Test that the aceess from the JAX-WS client to the JAX-WS service fails.
-
-
-		<kbd>![](./images/media/AMADevTools_JAXRCP_client_ModernizedToLiberty_07.png)</kbd>
-
-	3. Start server1 which hosts the original JAXRPC-service.
-
-			~/IBM/WebSphere/AppServer/profiles/AppSrv01/bin/startServer.sh server1
-
-	4. Test the access from the JAX-WS client hosted on Liberty to the JAX-RPC service hosted on traditional WAS using the name **John Doe**
-
-	5. Review the logs of the tWAS server hosting the JAX-RPC service 
-
-			tail -n 9 /home/techzone/IBM/WebSphere/AppServer/profiles/AppSrv01/logs/server1/SystemOut.log
-
-		You should find an entry indicating that the service has been called for the person **John Doe**
-
-		<kbd>![](./images/media/AMADevTools_JAXRCP_client_ModernizedToLiberty_08.png)</kbd>
-
-5. Clean up:
-
-	1. Stop server1 which hosts the original JAXRPC-service.
-
-			~/IBM/WebSphere/AppServer/profiles/AppSrv01/bin/stopServer.sh server1
-	
-	2. Stop the Liberty server hosting the client
-	
-		Switch to VC Code and use the Liberty dashboard to stop the server.
-	
-	3. Close VS Code.
-	
-	4. Stop the WAS ND Deployment Manager and the two node agents
-	
-			~/Student/demo-rpc-ws-project/scripts/stopWASEnv.sh
-
-		Alternatively you could also start the components separately
-
-			~/IBM/WebSphere/AppServer/profiles/AppSrv01/bin/stopNode.sh 
-			~/IBM/WebSphere/AppServer/profiles/AppSrv02/bin/stopNode.sh 
-			~/IBM/WebSphere/AppServer/profiles/Dmgr01/bin/stopManager.sh
-		
-	5. Remove the project directory
-
-			rm -rf ~/Student
 
 SUCCESS: 
 
@@ -1059,4 +946,11 @@ SUCCESS:
  - The converted JAX-WS client can also call the original JAX-RPC service, where the client runs on Liberty and the service on traditional WAS. 
 
  This concludes the detailed path section for the JAX-RPC client conversion.
+
+</details>
+</details>
+
+SUCCESS: 
+
+You successfully converted a JAX-RPC service and a JAX-RPC client to JAX-WS so that client and service can run on Liberty. You also tested the interoperability between the JAX-RPC client running on traditional WAS and the JAX-WS service running on Liberty works and vice-versa. 
 
