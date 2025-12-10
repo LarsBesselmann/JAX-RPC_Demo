@@ -469,16 +469,28 @@ The following files shhould get listed:
 		
 		~/Student/demo-rpc-ws-project/DemoRPC/target/liberty/wlp/bin/server start defaultServer
 
-	Hint: You can also find the completed project here:
-	~/Student/demo-rpc-ws-project/artifacts/DemoRPC_completed.zip
-
-
+	
  SUCCESS: 
 
  You successfully converted a JAX-RPC service toi JAX-WS so that it can run on Liberty. As you have seen, the interoperability between the JAX-RPC client running on traditional WAS and the JAX-WS service running on Liberty works.
  
 The next step is now to convert the JAX-RPC client to JAX-WS, so that it can run on Liberty as well.
 
+
+### Troubleshooting:
+
+You can also find the completed project here:
+
+	~/Student/demo-rpc-ws-project/artifacts/DemoRPC_completed.zip
+
+To switch to the completed project, use the commands:
+
+		cd ~/Student/demo-rpc-ws-project
+		mv DemoRPC DemoRPC.ori
+		unzip artifacts/DemoRPC_completed.zip 
+
+
+<br>
 
 ## Modernize the JAX-RPC client application using the Application Modernization Accellerator Development Tools
 
@@ -489,13 +501,37 @@ For the conversion of the JAX-RPC client to JAX-WS the same steps as for the ser
 
 ### Fast path: Use the already migrated client nd test it on Liberty
 
-1. Open a terminal window and copy the already converted client project
+Make sure that the environment is running:
+- The traditional WAS server2 is running with the JAX-RPC client
+- The Liberty server is running with the JAX-WS service
 
-	cp -r ~/Student/demo-rpc-ws-project/DemoRPCClient.Modernized/DemoRPCClient* .
+1. Test the client and service
 
-2. Switch to the client project and open it in VS Code
+	1. Access the JAX-WS service on Liberty via the URL: http://localhost:9080/DemoRPC/services/DemoRPC
+	
+		<kbd>![](./images/media/AMADevTools_JAXRCP_service_ModernizeToLiberty_29.png)</kbd>
+
+
+	2. Access the JAX-RPC client hosted on tWAS server2 at URL: http://localhost:9082/DemoRPCClient 
+
+		<kbd>![](./images/media/AMADevTools_JAXRCP_service_ModernizeToLiberty_30.png)</kbd>
+
+	3. Click on the link to access the servlet page **Personal Info Web Service**, enter the name and click on SubnitQuery.
+
+		<kbd>![](./images/media/AMADevTools_JAXRCP_service_ModernizeToLiberty_32.png)</kbd>
+
+		Verify that the service works.
+
+3. Open a terminal window and stop the server hosting the JAXRPC-client.
+
+		~/IBM/WebSphere/AppServer/profiles/AppSrv01/bin/stopServer.sh server2
+
+4. Copy the already converted client project
+
+		cp -r ~/Student/demo-rpc-ws-project/DemoRPCClient.Modernized/DemoRPCClient* .
+
+5. Switch to the client project and open it in VS Code
 
 	cd ~/Student/demo-rpc-ws-project/DemoRPCClient
 	code .
 
-	
