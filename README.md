@@ -22,6 +22,9 @@ Unfortunately the tool could only act on the application binaries. A new functio
 In this tutorial, you will use an existing JAX-RPC application running on traditional WebSphere Application Server. The applicaton consists of a client and a service component, both installed on different WAS servers within the same WAS ND cell. 
 First you will test the application as is, then you will analyze it for mdernizatrion target Liberty using the Application Modernization Accelerator (AMA).  Then you will use the AMA Dev Tool automation to modernize the service from JAX-RPC to JAX-WS so that it can run on Liberty. 
 
+<details open>
+<summary>Preparation</summary>
+
 ## Preparation:
 
 ### Reserve an environment in Techzone
@@ -154,7 +157,7 @@ Access AMA via browser using the URL https://rhel9-base.gym.lan:3001.
 
 Leave the browser open as you will use it later in the demo.
 
-
+</details>
 
 <br>
 
