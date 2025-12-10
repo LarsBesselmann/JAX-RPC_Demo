@@ -592,9 +592,23 @@ As the steps for the conversion of the JAX-RPC-CLient are the same as for the JA
 
 			~/IBM/WebSphere/AppServer/profiles/AppSrv01/bin/startServer.sh server1
 
-	4. Test the access from the JAX-WS client hosted on Liberty to the JAX-RPC service hosted on traditional WAS
+	4. Test the access from the JAX-WS client hosted on Liberty to the JAX-RPC service hosted on traditional WAS using the name **John Doe**
+
+	5. Review the logs of the tWAS server hosting the JAX-RPC service 
+
+			tail -n 9 /home/techzone/IBM/WebSphere/AppServer/profiles/AppSrv01/logs/server1/SystemOut.log
+
+		You should find an entry indicating that the service has been called for the person **John Doe**
+
+		<kbd>![](./images/media/AMADevTools_JAXRCP_client_ModernizedToLiberty_08.png)</kbd>
+
+
 
 SUCCESS: 
 
- The converted JAX-WS client can call the converted JAX-WS service, both running on Liberty.
+ The converted JAX-WS client can call the converted JAX-WS service, both running on Liberty. The converted JAX-WS client can also call the original JAX-RPC service, where the client runs on Liberty and the service on traditional WAS. 
+
+ This concludes the fastpath section for the client.
+
+ 
  
