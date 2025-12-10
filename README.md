@@ -616,17 +616,17 @@ As the steps for the conversion of the JAX-RPC-CLient are the same as for the JA
 	
 	4. Stop the WAS ND Deployment Manager and the two node agents
 	
-		~/Student/demo-rpc-ws-project/scripts/stopWASEnv.sh
+			~/Student/demo-rpc-ws-project/scripts/stopWASEnv.sh
 
 		Alternatively you could also start the components separately
 
-		~/IBM/WebSphere/AppServer/profiles/AppSrv01/bin/stopNode.sh 
-		~/IBM/WebSphere/AppServer/profiles/AppSrv02/bin/stopNode.sh 
-		~/IBM/WebSphere/AppServer/profiles/Dmgr01/bin/stopManager.sh
+			~/IBM/WebSphere/AppServer/profiles/AppSrv01/bin/stopNode.sh 
+			~/IBM/WebSphere/AppServer/profiles/AppSrv02/bin/stopNode.sh 
+			~/IBM/WebSphere/AppServer/profiles/Dmgr01/bin/stopManager.sh
 		
 	5. Remove the project directory
 
-		rm -rf ~/Student
+			rm -rf ~/Student
 
 
 
