@@ -52,6 +52,14 @@ The environment has the following software installed:
 
 
 
+3. As the AMA Dev Tools wizard was already executed before, you need to remove those details from the user data.
+
+		mv ~/.ibm_ama_devtools/vscode/e2ea3656-43fe-3fee-8497-2c2da57e9b23/ ~/.ibm_ama_devtools/vscode/e2ea3656-43fe-3fee-8497-2c2da57e9b23.sav
+
+		mv ~/.ibm_java_app_mod/e2ea3656-43fe-3fee-8497-2c2da57e9b23 ~/.ibm_java_app_mod/e2ea3656-43fe-3fee-8497-2c2da57e9b23.sav
+
+	If you do not complete those steps, the "Modernize to Liberty" wizard will start with the last resutls.
+
 ### Prepare the environment
 
 1. Start the WAS ND Deployment Manager and the two node agents
@@ -296,7 +304,7 @@ The following files shhould get listed:
 		<kbd>![](./images/media/AMADevTools_JAXRCP_service_ModernizeToLiberty_04.png)</kbd>
 
 
-	5. The wizard has detected that theh application uses JAX-RPC. Click on **Proceed** to start the automated conversion to JAX-WS. 
+	5. The wizard has detected that the application uses JAX-RPC. Click on **Proceed** to start the automated conversion to JAX-WS. 
 	
 		<kbd>![](./images/media/AMADevTools_JAXRCP_service_ModernizeToLiberty_05.png)</kbd>
 
@@ -663,15 +671,225 @@ SUCCESS:
 		cp -r ~/Student/demo-rpc-ws-project/DemoRPCClient.Original/DemoRPCClient* ~/Student/demo-rpc-ws-project
 
 
-2. Switch to the client project and review the project.
+2. Switch to the client project and open the project in VS Code
 
-	1. Open the project in VS Code
+		cd ~/Student/demo-rpc-ws-project/DemoRPCClient
+		code .
 
-			cd ~/Student/demo-rpc-ws-project/DemoRPCClient
-			code .
+	Ignore any popups and close the Welcome panel.
 
+3. In VS Code, switch to the **Project Explorer**
+
+4. Run the modernization wizard
+	1. Right-click in the project folder on the directory src and select **Modernize Java Applications > Modernize to Liberty**.
+
+		<kbd>![](./images/media/AMADevTools_JAXRCP_client_ModernizeToLiberty_01.png)</kbd>
+
+	2. Click the button **Upload migration plan**.
+
+		<kbd>![](./images/media/AMADevTools_JAXRCP_client_ModernizeToLiberty_02.png)</kbd>
+
+	
+	3. Select the migration plan that you exported from AMA and click on **Open**. If you followed the instructions, you can find the migration plan at: 
+
+			/home/techzone/Downloads/DemoRPCClient-1_0_0_war.ear_migrationPlan.zip
+
+		<kbd>![](./images/media/AMADevTools_JAXRCP_client_ModernizeToLiberty_03.png)</kbd>
+
+
+		Hint: A backup is available under /home/techzone/Student/
+		demo-rpc-ws-project/artifacts/MigrationPlans
+
+
+	4. The migration plan is loaded and the embedded configuration files are shown. Keep the **server.xml** selected and click on **Proceed**. 
+	
+		<kbd>![](./images/media/AMADevTools_JAXRCP_client_ModernizeToLiberty_04.png)</kbd>
+
+	5. The wizard has detected that the application uses JAX-RPC. Click on **Proceed** to start the automated conversion to JAX-WS. 
+	
+		<kbd>![](./images/media/AMADevTools_JAXRCP_client_ModernizeToLiberty_05.png)</kbd>
 
 **WORK in PROGRESS**
+
+
+
+
+
+	6. On the **JAX-RPC Source Migration Helper** panel, open the twisty for **Module: DemoRPC**.
+	
+		<kbd>![](./images/media/AMADevTools_JAXRCP_service_ModernizeToLiberty_06.png)</kbd>
+
+
+		Then open the twisty right to section **Pending**.
+	
+		<kbd>![](./images/media/AMADevTools_JAXRCP_service_ModernizeToLiberty_07.png)</kbd>
+	
+	7. Click on the link kwith the wsld file.
+
+		<kbd>![](./images/media/AMADevTools_JAXRCP_service_ModernizeToLiberty_08.png)</kbd>
+	
+	8. The next panel shows the steps that need to be performed.
+
+		<kbd>![](./images/media/AMADevTools_JAXRCP_service_ModernizeToLiberty_09.png)</kbd>
+	
+	9. Open the twisty for the section **Step 1 - Run automations**, then click on the button **Run Automations**.
+
+		<kbd>![](./images/media/AMADevTools_JAXRCP_service_ModernizeToLiberty_10.png)</kbd>
+
+	10. Wait until you get the feedback **Automations applied**.
+
+		<kbd>![](./images/media/AMADevTools_JAXRCP_service_ModernizeToLiberty_11.png)</kbd>
+
+	11. Close the twisty for **Run automations** and open the twisty for **Manual updates**.
+
+		<kbd>![](./images/media/AMADevTools_JAXRCP_service_ModernizeToLiberty_12.png)</kbd>
+
+		As you can see, there are no methods that need to be update.
+
+	12. Scroll down to the section **Additional Manual Updates** which lists general updates that need to be evaluated.
+
+		<kbd>![](./images/media/AMADevTools_JAXRCP_service_ModernizeToLiberty_13.png)</kbd>
+
+		Review those updates, then select **Mark all as done**.
+
+		<kbd>![](./images/media/AMADevTools_JAXRCP_service_ModernizeToLiberty_14.png)</kbd>
+
+
+	13. Close the section **Manual updates** and open the section **Step 3 - Review newly generated files**. 
+
+		<kbd>![](./images/media/AMADevTools_JAXRCP_service_ModernizeToLiberty_15.png)</kbd>
+
+		Feel free to review the generated files, then select **Mark as done**.
+
+		<kbd>![](./images/media/AMADevTools_JAXRCP_service_ModernizeToLiberty_16.png)</kbd>
+
+	14. Close the section **Step 3 - Review newly generated files** and open the section **Step 4 - Compile application files**. 
+
+		<kbd>![](./images/media/AMADevTools_JAXRCP_service_ModernizeToLiberty_17.png)</kbd>
+
+		You will compile the application later, so just select **Mark as done**. 
+		
+		<kbd>![](./images/media/AMADevTools_JAXRCP_service_ModernizeToLiberty_18.png)</kbd>
+
+	15. Click on the link **Back** at the top of the wizard.
+
+		<kbd>![](./images/media/AMADevTools_JAXRCP_service_ModernizeToLiberty_19.png)</kbd>
+
+	16. Back on the main page, click on **Build and analyze**.
+	
+		<kbd>![](./images/media/AMADevTools_JAXRCP_service_ModernizeToLiberty_20.png)</kbd>
+
+	17. Make sure that the build is successful.
+
+		<kbd>![](./images/media/AMADevTools_JAXRCP_service_ModernizeToLiberty_21.png)</kbd>
+
+		Then click on **Proceed**.
+
+		<kbd>![](./images/media/AMADevTools_JAXRCP_service_ModernizeToLiberty_22.png)</kbd>
+
+	18. The panel should indicate that there are no issues left.
+
+		<kbd>![](./images/media/AMADevTools_JAXRCP_service_ModernizeToLiberty_23.png)</kbd>
+
+		Close the modernization wizard.
+
+5. Complete the manual updates required for Liberty deployment  
+
+	1. Switch to the **VS Code Project Explorer** and open the **server.xml** file that has been imported from the migration plan. The server.xml file is located in the folder **/src/main/liberty/config**
+	As you can see, the jaxws-2.2 feature is missing.
+
+		<kbd>![](./images/media/AMADevTools_JAXRCP_service_ModernizeToLiberty_24.png)</kbd>
+
+		There are also some other settings that you do not need at the moment like the federated repository. A basic server.xml looks like this:
+
+			<?xml version="1.0" encoding="UTF-8"?>
+			<server>
+    			<featureManager>
+        			<feature>servlet-4.0</feature>
+        			<feature>localConnector-1.0</feature>
+        			<feature>jaxws-2.2</feature>
+        			<feature>jsp-2.3</feature>
+    			</featureManager>
+
+    			<variable name="http.port" defaultValue="9080"/>
+    			<variable name="https.port" defaultValue="9443"/>
+    			<variable name="app.context.root" value="/"/>
+    			<!-- tag::httpEndpoint[] -->
+    			<httpEndpoint httpPort="${http.port}"
+                	  httpsPort="${https.port}" id="defaultHttpEndpoint"  host="*" />
+    			<!-- end::httpEndpoint[] -->
+    			<webApplication id="ServletSample" location="test-project-1.0.0.war" contextRoot="${app.context.root}" />
+				<!-- TODO: note for the user to set the contextRoot based on their old WSDL/url/endpoint -->
+			</server>
+
+	2. To ease the cleanup of the server.xml, replace the server.xml in the project with a preparated one:
+
+		In VSCode, switch to the terminal and execute the command:
+		
+			cp  ~/Student/demo-rpc-ws-project/artifacts/DemoRPC-server.xml    ~/Student/demo-rpc-ws-project/DemoRPC/src/main/liberty/config/server.xml 
+
+		<kbd>![](./images/media/AMADevTools_JAXRCP_service_ModernizeToLiberty_25.png)</kbd>
+
+
+	<!--
+	3. Update the pom.xml
+		
+			Change to <sourceDirectory>src/main/java</sourceDirectory>
+	-->
+
+	3. Stop server1 which hosts the original JAXRPC-service.
+
+			~/IBM/WebSphere/AppServer/profiles/AppSrv01/bin/stopServer.sh server1
+
+	4. In VS Code – Rebuild and package the DemoRPC app by executing in the terminal window the command
+			
+			mvn clean package
+
+		<kbd>![](./images/media/AMADevTools_JAXRCP_service_ModernizeToLiberty_27.png)</kbd>
+
+
+	5. Start the Liberty instance via Liberty Dashboard
+	
+		<kbd>![](./images/media/AMADevTools_JAXRCP_service_ModernizeToLiberty_28.png)</kbd>
+
+	
+	6. Access the JAX-WS service on Liberty via the URL: http://localhost:9080/DemoRPC/services/DemoRPC
+	
+		<kbd>![](./images/media/AMADevTools_JAXRCP_service_ModernizeToLiberty_29.png)</kbd>
+
+
+	7. Access the JAX-RPC client hosted on tWAS server2 at URL: http://localhost:9082/DemoRPCClient
+
+		<kbd>![](./images/media/AMADevTools_JAXRCP_service_ModernizeToLiberty_30.png)</kbd>
+
+	8. Click on the link to access the servlet page **Personal Info Web Service**
+
+		<kbd>![](./images/media/AMADevTools_JAXRCP_service_ModernizeToLiberty_31.png)</kbd>
+
+	9. Enter John Doe as name, then click on **Submit Query** 
+
+		<kbd>![](./images/media/AMADevTools_JAXRCP_service_ModernizeToLiberty_32.png)</kbd>
+
+		You should get the age and place of birth as response from the JAX-WS service. 
+
+		<kbd>![](./images/media/AMADevTools_JAXRCP_service_ModernizeToLiberty_33.png)</kbd>
+
+	10. Stop the Liberty instance via Liberty Dashboard
+	
+		<kbd>![](./images/media/AMADevTools_JAXRCP_service_ModernizeToLiberty_34.png)</kbd>
+
+	11. Close VS Code
+
+	HINT: If you want to start the server again, you could do it directly via the command:
+		
+		~/Student/demo-rpc-ws-project/DemoRPC/target/liberty/wlp/bin/server start defaultServer
+
+	
+ SUCCESS: 
+
+ You successfully converted a JAX-RPC service to JAX-WS so that it can run on Liberty. As you have seen, the interoperability between the JAX-RPC client running on traditional WAS and the JAX-WS service running on Liberty works.
+ 
+The next step is now to convert the JAX-RPC client to JAX-WS, so that it can run on Liberty as well.
 
 
 	2. Review the **server.xml** file
