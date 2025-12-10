@@ -825,7 +825,7 @@ SUCCESS:
 
 		In VSCode, switch to the terminal and execute the command:
 		
-			cp  ~/Student/demo-rpc-ws-project/artifacts/DemoRPCClient-server.xml    ~/Student/demo-rpc-ws-project/DemoRPCClient/src/main/liberty/config/server.xml 
+			cp  ~/Student/demo-rpc-ws-project/artifacts/DemoRPCClient-server.xml ~/Student/demo-rpc-ws-project/DemoRPCClient/src/main/liberty/config/server.xml 
 
 		<kbd>![](./images/media/AMADevTools_JAXRCP_service_ModernizeToLiberty_25.png)</kbd>
 
