@@ -606,9 +606,10 @@ As the steps for the conversion of the JAX-RPC-CLient are the same as for the JA
 
 SUCCESS: 
 
- The converted JAX-WS client can call the converted JAX-WS service, both running on Liberty. The converted JAX-WS client can also call the original JAX-RPC service, where the client runs on Liberty and the service on traditional WAS. 
+ - The converted JAX-WS client can call the converted JAX-WS service, both running on Liberty. 
+ - The converted JAX-WS client can also call the original JAX-RPC service, where the client runs on Liberty and the service on traditional WAS. 
 
  This concludes the fastpath section for the client.
 
- 
+
  
