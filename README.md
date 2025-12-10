@@ -459,6 +459,15 @@ The following files shhould get listed:
 
 		<kbd>![](./images/media/AMADevTools_JAXRCP_service_ModernizeToLiberty_33.png)</kbd>
 
+	10. Stop the Liberty instance via Liberty Dashboard
+	
+		<kbd>![](./images/media/AMADevTools_JAXRCP_service_ModernizeToLiberty_34.png)</kbd>
+
+	11. Close VS Code
+
+	HINT: If you want to start the server again, you could do it directly via the command:
+		
+		~/Student/demo-rpc-ws-project/DemoRPC/target/liberty/wlp/bin/server start defaultServer
 
 
  SUCCESS: 
