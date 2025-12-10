@@ -839,10 +839,12 @@ SUCCESS:
 
 		<kbd>![](./images/media/AMADevTools_JAXRCP_client_ModernizeToLiberty_24.png)</kbd>
 
-**** Work in progress ***
 
 
 	2. Access the JAX-WS client hosted on Liberty at URL: http://localhost:9082/DemoRPCClient-1.0.0 
+
+**** Work in progress ***
+
 
 		<kbd>![](./images/media/AMADevTools_JAXRCP_client_ModernizedToLiberty_03.png)</kbd>
 
@@ -956,8 +958,6 @@ SUCCESS:
 	HINT: If you want to start the server again, you could do it directly via the command:
 		
 		~/Student/demo-rpc-ws-project/DemoRPC/target/liberty/wlp/bin/server start defaultServer
-
-**WORK in PROGRESS**
 
 	
  SUCCESS: 
