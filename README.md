@@ -514,10 +514,18 @@ Make sure that the environment is running:
 	
 		<kbd>![](./images/media/AMADevTools_JAXRCP_service_ModernizeToLiberty_29.png)</kbd>
 
+		HINT: If the Liberty server hosting the JAX-WS service is not started, use the command:
+		
+			~/Student/demo-rpc-ws-project/DemoRPC/target/liberty/wlp/bin/server start defaultServer
+
 
 	2. Access the JAX-RPC client hosted on tWAS server2 at URL: http://localhost:9082/DemoRPCClient 
 
 		<kbd>![](./images/media/AMADevTools_JAXRCP_service_ModernizeToLiberty_30.png)</kbd>
+
+		HINT: If the tWAS instance hosting the JAX-RPC client is not started, use the command:
+		
+			~/IBM/WebSphere/AppServer/profiles/AppSrv02/bin/startServer.sh server2
 
 	3. Click on the link to access the servlet page **Personal Info Web Service**, enter the name and click on SubnitQuery.
 
@@ -642,4 +650,4 @@ SUCCESS:
  This concludes the fastpath section for the client.
 
 
- 
+ ### Detailed path: Use AMA with the migration plan and do the required steps 
