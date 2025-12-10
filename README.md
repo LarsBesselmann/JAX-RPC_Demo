@@ -586,8 +586,6 @@ As the steps for the conversion of the JAX-RPC-CLient are the same as for the JA
 
 		<kbd>![](./images/media/AMADevTools_JAXRCP_client_ModernizedToLiberty_05.png)</kbd>
 
-		End the command
-
 	5. Review the logs of the Liberty server hosting the JAX-WS client 
 
 		tail -n 6 ~/Student/demo-rpc-ws-project/DemoRPCClient/target/liberty/wlp/usr/servers/defaultServer/logs/messages.log 
@@ -843,24 +841,24 @@ SUCCESS:
 
 	2. Access the JAX-WS client hosted on Liberty at URL: http://localhost:9082/DemoRPCClient-1.0.0 
 
-**** Work in progress ***
 
-
-		<kbd>![](./images/media/AMADevTools_JAXRCP_client_ModernizedToLiberty_03.png)</kbd>
+		<kbd>![](./images/media/AMADevTools_JAXRCP_client_ModernizeToLiberty_25.png)</kbd>
 
 	3. Click on the link to access the servlet page **Personal Info Web Service**, enter the name and click on SubnitQuery.
 
-		<kbd>![](./images/media/AMADevTools_JAXRCP_client_ModernizedToLiberty_04.png)</kbd>
-
+		<kbd>![](./images/media/AMADevTools_JAXRCP_client_ModernizeToLiberty_26.png)</kbd>
+		
 	4. Review the logs of the Liberty server hosting the JAX-WS service 
 
-		tail -n 9 ~/Student/demo-rpc-ws-project/DemoRPC/target/liberty/wlp/usr/servers/defaultServer/logs/messages.log
+			tail -n 9 ~/Student/demo-rpc-ws-project/DemoRPC/target/liberty/wlp/usr/servers/defaultServer/logs/messages.log
 
 		You should find entries indicating that the service has been called by the client **DemoRPCClient-1.0.0** for the person **Jane Doe**
 
 		<kbd>![](./images/media/AMADevTools_JAXRCP_client_ModernizedToLiberty_05.png)</kbd>
 
-		End the command
+
+**** Work in progress ***
+
 
 	5. Review the logs of the Liberty server hosting the JAX-WS client 
 
@@ -995,8 +993,6 @@ The next step is now to convert the JAX-RPC client to JAX-WS, so that it can run
 		You should find entries indicating that the service has been called by the client **DemoRPCClient-1.0.0** for the person **Jane Doe**
 
 		<kbd>![](./images/media/AMADevTools_JAXRCP_client_ModernizedToLiberty_05.png)</kbd>
-
-		End the command
 
 	5. Review the logs of the Liberty server hosting the JAX-WS client 
 
