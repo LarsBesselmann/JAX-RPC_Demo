@@ -831,16 +831,6 @@ SUCCESS:
 
 
 
-
-**WORK in PROGRESS**
-
-
-	<!--
-	3. Update the pom.xml
-		
-			Change to <sourceDirectory>src/main/java</sourceDirectory>
-	-->
-
 	3. Stop server1 which hosts the original JAXRPC-service.
 
 			~/IBM/WebSphere/AppServer/profiles/AppSrv01/bin/stopServer.sh server1
@@ -887,6 +877,8 @@ SUCCESS:
 	HINT: If you want to start the server again, you could do it directly via the command:
 		
 		~/Student/demo-rpc-ws-project/DemoRPC/target/liberty/wlp/bin/server start defaultServer
+
+**WORK in PROGRESS**
 
 	
  SUCCESS: 
