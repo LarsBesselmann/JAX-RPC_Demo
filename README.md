@@ -496,11 +496,10 @@ To switch to the completed project, use the commands:
 
 For the conversion of the JAX-RPC client to JAX-WS the same steps as for the service are required. Based on this, there are two options:
 
-- Fast path: Use the already migrated client nd test it on Liberty
+- Fast path: Use the already migrated client and test it on Liberty
 - Details path: Use AMA with the migration plan and do the required steps 
 
-### Fast path: Use the already migrated client nd test it on Liberty
-
+### Preparation
 Make sure that the environment is running:
 - The traditional WAS server2 is running with the JAX-RPC client
 - The Liberty server is running with the JAX-WS service
@@ -524,13 +523,17 @@ Make sure that the environment is running:
 
 3. Open a terminal window and stop the server hosting the JAXRPC-client.
 
-		~/IBM/WebSphere/AppServer/profiles/AppSrv01/bin/stopServer.sh server2
+		~/IBM/WebSphere/AppServer/profiles/AppSrv02/bin/stopServer.sh server2
 
-4. Copy the already converted client project
+
+### Fast path: Use the already migrated client and test it on Liberty
+
+
+1. Copy the already converted client project
 
 		cp -r ~/Student/demo-rpc-ws-project/DemoRPCClient.Modernized/DemoRPCClient* ~/Student/demo-rpc-ws-project
 
-5. Switch to the client project and review the project.
+2. Switch to the client project and review the project.
 
 	1. Open the project in VS Code
 
@@ -545,3 +548,14 @@ Make sure that the environment is running:
 
 		<kbd>![](./images/media/AMADevTools_JAXRCP_client_ModernizedToLiberty_02.png)</kbd>
 		
+3. Test the project
+
+	1. Access the JAX-WS client hosted on Liberty at URL: http://localhost:9082/DemoRPCClient-1.0.0 
+
+		<kbd>![](./images/media/AMADevTools_JAXRCP_client_ModernizedToLiberty_03.png)</kbd>
+
+	2. Click on the link to access the servlet page **Personal Info Web Service**, enter the name and click on SubnitQuery.
+
+		<kbd>![](./images/media/AMADevTools_JAXRCP_service_ModernizeToLiberty_32.png)</kbd>
+
+		Verify that the service works.
