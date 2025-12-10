@@ -564,9 +564,6 @@ As the steps for the conversion of the JAX-RPC-CLient are the same as for the JA
 
 		<kbd>![](./images/media/AMADevTools_JAXRCP_client_ModernizedToLiberty_01.png)</kbd>
 
-	3. Start the Liberty server via **Liberty dashboard** 
-
-		<kbd>![](./images/media/AMADevTools_JAXRCP_client_ModernizedToLiberty_02.png)</kbd>
 		
 3. Test the converted client
 
@@ -836,12 +833,99 @@ SUCCESS:
 
 		<kbd>![](./images/media/AMADevTools_JAXRCP_client_ModernizeToLiberty_23.png)</kbd>
 
+6. Test the converted client
 
-	4. Start the Liberty instance via Liberty Dashboard
-	
-		<kbd>![](./images/media/AMADevTools_JAXRCP_service_ModernizeToLiberty_28.png)</kbd>
+	1. Start the Liberty server via **Liberty dashboard** 
 
+		<kbd>![](./images/media/AMADevTools_JAXRCP_client_ModernizeToLiberty_24.png)</kbd>
+
+**** Work in progress ***
+
+
+	2. Access the JAX-WS client hosted on Liberty at URL: http://localhost:9082/DemoRPCClient-1.0.0 
+
+		<kbd>![](./images/media/AMADevTools_JAXRCP_client_ModernizedToLiberty_03.png)</kbd>
+
+	3. Click on the link to access the servlet page **Personal Info Web Service**, enter the name and click on SubnitQuery.
+
+		<kbd>![](./images/media/AMADevTools_JAXRCP_client_ModernizedToLiberty_04.png)</kbd>
+
+	4. Review the logs of the Liberty server hosting the JAX-WS service 
+
+		tail -n 9 ~/Student/demo-rpc-ws-project/DemoRPC/target/liberty/wlp/usr/servers/defaultServer/logs/messages.log
+
+		You should find entries indicating that the service has been called by the client **DemoRPCClient-1.0.0** for the person **Jane Doe**
+
+		<kbd>![](./images/media/AMADevTools_JAXRCP_client_ModernizedToLiberty_05.png)</kbd>
+
+		End the command
+
+	5. Review the logs of the Liberty server hosting the JAX-WS client 
+
+		tail -n 6 ~/Student/demo-rpc-ws-project/DemoRPCClient/target/liberty/wlp/usr/servers/defaultServer/logs/messages.log 
+
+		You should find entries indicating that the client **DemoRPCClient-1.0.0** initialized the servlet **DemoRPCServlet**.
+
+		<kbd>![](./images/media/AMADevTools_JAXRCP_client_ModernizedToLiberty_06.png)</kbd>
+
+
+4. Test the converted client with the original JAX-RPC service running on tWAS.
+
+	1. Stop the Liberty server hosting the JAX-WS service
+
+			~/Student/demo-rpc-ws-project/DemoRPC/target/liberty/wlp/bin/server stop defaultServer
+
+	2. Test that the aceess from the JAX-WS client to the JAX-WS service fails.
+
+
+		<kbd>![](./images/media/AMADevTools_JAXRCP_client_ModernizedToLiberty_07.png)</kbd>
+
+	3. Start server1 which hosts the original JAXRPC-service.
+
+			~/IBM/WebSphere/AppServer/profiles/AppSrv01/bin/startServer.sh server1
+
+	4. Test the access from the JAX-WS client hosted on Liberty to the JAX-RPC service hosted on traditional WAS using the name **John Doe**
+
+	5. Review the logs of the tWAS server hosting the JAX-RPC service 
+
+			tail -n 9 /home/techzone/IBM/WebSphere/AppServer/profiles/AppSrv01/logs/server1/SystemOut.log
+
+		You should find an entry indicating that the service has been called for the person **John Doe**
+
+		<kbd>![](./images/media/AMADevTools_JAXRCP_client_ModernizedToLiberty_08.png)</kbd>
+
+5. Clean up:
+
+	1. Stop server1 which hosts the original JAXRPC-service.
+
+			~/IBM/WebSphere/AppServer/profiles/AppSrv01/bin/stopServer.sh server1
 	
+	2. Stop the Liberty server hosting the client
+	
+		Switch to VC Code and use the Liberty dashboard to stop the server.
+	
+	3. Close VS Code.
+	
+	4. Stop the WAS ND Deployment Manager and the two node agents
+	
+			~/Student/demo-rpc-ws-project/scripts/stopWASEnv.sh
+
+		Alternatively you could also start the components separately
+
+			~/IBM/WebSphere/AppServer/profiles/AppSrv01/bin/stopNode.sh 
+			~/IBM/WebSphere/AppServer/profiles/AppSrv02/bin/stopNode.sh 
+			~/IBM/WebSphere/AppServer/profiles/Dmgr01/bin/stopManager.sh
+		
+	5. Remove the project directory
+
+			rm -rf ~/Student
+
+
+
+SUCCESS: 
+
+
+
 	6. Access the JAX-WS service on Liberty via the URL: http://localhost:9080/DemoRPC/services/DemoRPC
 	
 		<kbd>![](./images/media/AMADevTools_JAXRCP_service_ModernizeToLiberty_29.png)</kbd>
