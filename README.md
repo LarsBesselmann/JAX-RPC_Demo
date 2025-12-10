@@ -670,6 +670,10 @@ SUCCESS:
 			cd ~/Student/demo-rpc-ws-project/DemoRPCClient
 			code .
 
+
+**WORK in PROGRESS**
+
+
 	2. Review the **server.xml** file
 
 		<kbd>![](./images/media/AMADevTools_JAXRCP_client_ModernizedToLiberty_01.png)</kbd>
