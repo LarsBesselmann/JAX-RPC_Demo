@@ -472,7 +472,7 @@ The following files shhould get listed:
 	
  SUCCESS: 
 
- You successfully converted a JAX-RPC service toi JAX-WS so that it can run on Liberty. As you have seen, the interoperability between the JAX-RPC client running on traditional WAS and the JAX-WS service running on Liberty works.
+ You successfully converted a JAX-RPC service to JAX-WS so that it can run on Liberty. As you have seen, the interoperability between the JAX-RPC client running on traditional WAS and the JAX-WS service running on Liberty works.
  
 The next step is now to convert the JAX-RPC client to JAX-WS, so that it can run on Liberty as well.
 
@@ -548,7 +548,7 @@ As the steps for the conversion of the JAX-RPC-CLient are the same as for the JA
 
 		<kbd>![](./images/media/AMADevTools_JAXRCP_client_ModernizedToLiberty_02.png)</kbd>
 		
-3. Test the project
+3. Test the converted client
 
 	1. Access the JAX-WS client hosted on Liberty at URL: http://localhost:9082/DemoRPCClient-1.0.0 
 
@@ -576,3 +576,22 @@ As the steps for the conversion of the JAX-RPC-CLient are the same as for the JA
 
 		<kbd>![](./images/media/AMADevTools_JAXRCP_client_ModernizedToLiberty_06.png)</kbd>
 
+
+4. Test the converted client with the original JAX-RPC service running on tWAS.
+
+	1. Stop the Liberty server hosting the JAX-WS service
+
+			~/Student/demo-rpc-ws-project/DemoRPC/target/liberty/wlp/bin/server start defaultServer
+
+	2. Test that the aceess from the JAX-WS client to the JAX-WS service fails.
+
+	3. Start server1 which hosts the original JAXRPC-service.
+
+			~/IBM/WebSphere/AppServer/profiles/AppSrv01/bin/startServer.sh server1
+
+	4. Test the access from the JAX-WS client hosted on Liberty to the JAX-RPC service hosted on traditional WAS
+
+SUCCESS: 
+
+ The converted JAX-WS client can call the converted JAX-WS service, both running on Liberty.
+ 
