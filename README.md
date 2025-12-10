@@ -532,6 +532,6 @@ Make sure that the environment is running:
 
 5. Switch to the client project and open it in VS Code
 
-	cd ~/Student/demo-rpc-ws-project/DemoRPCClient
-	code .
+		cd ~/Student/demo-rpc-ws-project/DemoRPCClient
+		code .
 
